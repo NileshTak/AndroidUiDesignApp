@@ -1,144 +1,137 @@
 
 package com.nilprojects.androiduidesign
 
-import android.content.DialogInterface
+import android.content.Context
 import android.content.Intent
-import android.graphics.Color
-import android.os.Build
 import android.os.Bundle
-import android.view.Menu
-import android.view.MenuItem
 import android.view.View
-import android.view.WindowManager
-import android.widget.EditText
-import android.widget.ImageView
-import android.widget.LinearLayout
 import android.widget.TextView
-import androidx.appcompat.app.ActionBarDrawerToggle
 
-import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
-import androidx.appcompat.widget.Toolbar
-import androidx.core.view.GravityCompat
-import androidx.drawerlayout.widget.DrawerLayout
 
 import com.diegodobelo.expandingview.ExpandingItem
 import com.diegodobelo.expandingview.ExpandingList
-import com.google.android.material.navigation.NavigationView
-import com.nilprojects.androiduidesign.Fragments.HomeFragment
-import de.hdodenhof.circleimageview.CircleImageView
+import com.nilprojects.androiduidesign.Activities.TapBarMenu.TapBarMenu
+import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper
 
-class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
+class MainActivity : AppCompatActivity() {
 
-    lateinit var tvNavTitle : TextView
-    lateinit var navProfList : CircleImageView
+    private var mExpandingList: ExpandingList? = null
+
+    override fun attachBaseContext(newBase: Context?) {
+        super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase))
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        tvNavTitle = findViewById<TextView>(R.id.tvnavTitle)
-        //     btn_logout = findViewById<Button>(R.id.btn_logout)
-        navProfList = findViewById<CircleImageView>(R.id.navProfList)
+        mExpandingList =  findViewById<ExpandingList>(R.id.expanding_list_main)
 
 
-        val toolbar = findViewById<View>(R.id.toolbar) as Toolbar
-        setSupportActionBar(toolbar)
+        createItems()
+
+    }
 
 
-        supportFragmentManager.beginTransaction().setCustomAnimations(android.R.anim.slide_in_left,
-            android.R.anim.slide_out_right).replace(R.id.frame_container, HomeFragment()).commit()
-        supportActionBar!!.title = ""
-        tvNavTitle.text = "Home"
+    private fun createItems() {
+        addItem(
+            "Bottom Navigation Bar",
+            arrayOf("Tap Bar Menu", "Boat", "Candy", "Collection", "Sport", "Ball", "Head"),
+            R.color.pink,
+            R.drawable.ic_ghost
+        )
+        addItem("Mary", arrayOf("Dog", "Horse", "Boat"), R.color.blue, R.drawable.ic_ghost)
+        addItem("Ana", arrayOf("Cat"), R.color.purple, R.drawable.ic_ghost)
+        addItem(
+            "Peter",
+            arrayOf("Parrot", "Elephant", "Coffee"),
+            R.color.yellow,
+            R.drawable.ic_ghost
+        )
+        addItem("Joseph", arrayOf(), R.color.orange, R.drawable.ic_ghost)
+        addItem("Paul", arrayOf("Golf", "Football"), R.color.green, R.drawable.ic_ghost)
+        addItem(
+            "Larry",
+            arrayOf("Ferrari", "Mazda", "Honda", "Toyota", "Fiat"),
+            R.color.blue,
+            R.drawable.ic_ghost
+        )
+        addItem("Moe", arrayOf("Beans", "Rice", "Meat"), R.color.yellow, R.drawable.ic_ghost)
+        addItem(
+            "Bart",
+            arrayOf("Hamburger", "Ice cream", "Candy"),
+            R.color.purple,
+            R.drawable.ic_ghost
+        )
+    }
+
+    private fun addItem(title: String, subItems: Array<String>, colorRes: Int, iconRes: Int) {
+        //Let's create an item with R.layout.expanding_layout
+        val item = mExpandingList!!.createNewItem(R.layout.expanding_layout)
+
+        if (item != null) {
+            item!!.setIndicatorColorRes(colorRes)
+            item!!.setIndicatorIconRes(iconRes)
+            //It is possible to get any view inside the inflated layout. Let's set the text in the item
+            (item!!.findViewById(R.id.title) as TextView).text = title
 
 
+            //We can create items in batch.
+            item!!.createSubItems(subItems.size)
+            for (i in 0 until item!!.getSubItemsCount()) {
+                //Let's get the created sub item by its index
+                val view = item!!.getSubItemView(i)
 
-        val drawer = findViewById(R.id.drawer_layout) as DrawerLayout
-
-        val holder = findViewById<LinearLayout>(R.id.holder)
-        val toggle = object : ActionBarDrawerToggle(
-            this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close) {
-            override fun onDrawerSlide(drawerView: View, slideOffset: Float) {
-
-                val scaleFactor = 7f
-                val slideX = drawerView.width * slideOffset
-
-                holder.setTranslationX(slideX)
-                holder.setScaleX(1 - slideOffset / scaleFactor)
-                holder.setScaleY(1 - slideOffset / scaleFactor)
-
-                super.onDrawerSlide(drawerView, slideOffset)
+                configureSubItem(item, view, subItems[i])
             }
-        }
+//            item!!.findViewById<ImageView>(R.id.add_more_sub_items).setOnClickListener(View.OnClickListener {
+//                showInsertDialog(object : OnItemCreated {
+//                    override fun itemCreated(title: String) {
+//                        val newSubItem = item!!.createSubItem()
+//                        configureSubItem(item, newSubItem!!, title)
+//                    }
+//                })
+//            })
 
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
-            val w = window
-            w.setFlags(
-                WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS,
-                WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS)// will remove all possible our aactivity's window bounds
-        }
-
-        drawer.addDrawerListener(toggle)
-
-        drawer.setScrimColor(Color.TRANSPARENT)
-        toggle.syncState()
-
-        val navigationView = findViewById(R.id.nav_view) as NavigationView
-        navigationView.setNavigationItemSelectedListener(this)
-    }
-
-    override fun onBackPressed() {
-        val drawer = findViewById(R.id.drawer_layout) as DrawerLayout
-        if (drawer.isDrawerOpen(GravityCompat.START)) {
-            drawer.closeDrawer(GravityCompat.START)
-        } else {
-
+//            item!!.findViewById<ImageView>(R.id.remove_item)
+//                .setOnClickListener(View.OnClickListener { mExpandingList!!.removeItem(item) })
         }
     }
 
-    override fun onCreateOptionsMenu(menu: Menu): Boolean {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        menuInflater.inflate(R.menu.main, menu)
-        return true
-    }
+    private fun configureSubItem(item: ExpandingItem?, view: View, subTitle: String) {
 
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        when(item?.itemId)
-        {
-            R.id.view_users ->
+        var subItem = view.findViewById<View>(R.id.sub_title) as TextView
+
+        subItem.text = subTitle
+
+        subItem.setOnClickListener {
+            if (subItem.text == "Tap Bar Menu")
             {
-//                var int = Intent(this,User_profiles_list :: class.java)
-//                startActivity(int)
+                var int = Intent(this, TapBarMenu:: class.java)
+                startActivity(int)
             }
         }
-        return super.onOptionsItemSelected(item)
+
+
+
+
+
+//        view.findViewById<View>(R.id.remove_sub_item)
+//            .setOnClickListener { item!!.removeSubItem(view) }
     }
 
-    override fun onNavigationItemSelected(item: MenuItem): Boolean {
-        // Handle navigation view item clicks here.
-        val id = item.itemId
+//    private fun showInsertDialog(positive: OnItemCreated) {
+//        val text = EditText(activity)
+//        val builder = AlertDialog.Builder(activity!!.applicationContext)
+//        builder.setView(text)
+//        builder.setTitle(R.string.enter_title)
+//        builder.setPositiveButton(android.R.string.ok) { dialog, which -> positive.itemCreated(text.text.toString()) }
+//        builder.setNegativeButton(android.R.string.cancel, null)
+//        builder.show()
+//    }
 
-        when (id) {
-            R.id.nav_home -> {
-
-                loadHomeFrag(fragHome = HomeFragment())
-            }
-        }
-        val drawer = findViewById<DrawerLayout>(R.id.drawer_layout)
-        drawer.closeDrawer(GravityCompat.START)
-        return true
-    }
-
-    fun loadHomeFrag(fragHome : HomeFragment)
-    {
-        val fm = supportFragmentManager.beginTransaction()
-        supportActionBar!!.title = ""
-        tvNavTitle.text = "Home"
-        fm.setCustomAnimations(android.R.anim.slide_in_left,
-            android.R.anim.slide_out_right)
-        fm.replace(R.id.frame_container,fragHome)
-        fm.commit()
-    }
-
-
-        }
+//    internal interface OnItemCreated {
+//        fun itemCreated(title: String)
+//    }
+}

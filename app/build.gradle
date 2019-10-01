@@ -37,6 +37,7 @@ dependencies {
 
 
     implementation 'com.diegodobelo.expandingview:expanding-view:0.9.4'
-    implementation 'nl.psdcompany:duo-navigation-drawer:3.0.0'
+    implementation 'com.github.michaldrabik:TapBarMenu:1.0.6'
     implementation 'de.hdodenhof:circleimageview:2.2.0'
+    implementation 'uk.co.chrisjenx:calligraphy:2.3.0'
 }
