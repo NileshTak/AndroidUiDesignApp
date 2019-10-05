@@ -1,21 +1,17 @@
-package com.nilprojects.androiduidesign.Activities.TapBarMenu
+package com.nilprojects.androiduidesign.Activities.FluidBottomNav
 
 import android.content.Context
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.viewpager.widget.ViewPager
 import com.google.android.material.tabs.TabLayout
-import com.nilprojects.androiduidesign.Activities.TapBarMenu.Fragment.TapCode
-import com.nilprojects.androiduidesign.Activities.TapBarMenu.Fragment.TapOutPut
-import com.nilprojects.androiduidesign.R
+import com.nilprojects.androiduidesign.Activities.FluidBottomNav.Fragment.CodeSimple
+import com.nilprojects.androiduidesign.Activities.FluidBottomNav.Fragment.OutputSimple
 import com.nilprojects.androiduidesign.Adapter.TabAdapter
+import com.nilprojects.androiduidesign.R
 import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper
 
-
-
-
-class TapBarMenu : AppCompatActivity() {
-
+class FluidBottomNav : AppCompatActivity() {
 
     lateinit var tabLayout : TabLayout
     lateinit var adapter: TabAdapter
@@ -27,17 +23,18 @@ class TapBarMenu : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_tap_bar_menu)
-        supportActionBar!!.title = "Tap Bar Menu"
+        setContentView(R.layout.activity_bubble_bottom_nav)
+
+        supportActionBar!!.title = "Simple Bottom Nav"
         val actionbar = supportActionBar
         actionbar!!.setDisplayHomeAsUpEnabled(true)
 
-        tabLayout = findViewById<TabLayout>(R.id.tabLayout)
-        viewPager = findViewById<ViewPager>(R.id.viewPager)
+        tabLayout = findViewById<TabLayout>(R.id.tabLayoutBubble)
+        viewPager = findViewById<ViewPager>(R.id.viewPagerBubble)
 
         adapter = TabAdapter(this.supportFragmentManager)
-        adapter.addFragment(TapOutPut(), "Output" )
-        adapter.addFragment(TapCode(), "Code")
+        adapter.addFragment(OutputSimple(), "Output" )
+        adapter.addFragment(CodeSimple(), "Code")
 
 
 

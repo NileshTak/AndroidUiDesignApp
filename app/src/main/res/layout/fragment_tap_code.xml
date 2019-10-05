@@ -54,7 +54,8 @@
             android:layout_height="wrap_content" >
 
             <TextView
-                android:text="implementation 'com.github.michaldrabik:TapBarMenu:1.0.6'"
+                android:id="@+id/tvTapDependency"
+
                 android:textColor="@android:color/black"
                 android:layout_margin="4dp"
                 android:padding="4dp"
@@ -100,13 +101,8 @@
                 android:layout_height="wrap_content" >
 
                 <TextView
-                    android:text="allprojects {
-    \n        repositories {
-        \n                  google()
-        \n                   jcenter()
-        \n                   maven { url 'https://jitpack.io' }
-    \n                                 }
-\n                      }"
+                    android:id="@+id/tvTapGradle"
+
                     android:textColor="@android:color/black"
                     android:layout_margin="4dp"
                     android:padding="4dp"

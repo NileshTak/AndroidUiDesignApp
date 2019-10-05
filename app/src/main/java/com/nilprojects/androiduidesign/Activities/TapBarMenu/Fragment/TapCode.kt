@@ -18,6 +18,8 @@ class TapCode : Fragment() {
 
     lateinit var xmlData : TextView
     lateinit var kotlinData : TextView
+    lateinit var tvTapDependency : TextView
+    lateinit var tvTapGradle : TextView
     var TapXmlData = "<RelativeLayout\n" +
             "\txmlns:android=\"http://schemas.android.com/apk/res/android\"\n" +
             "\txmlns:app=\"http://schemas.android.com/apk/res-auto\"\n" +
@@ -151,6 +153,15 @@ class TapCode : Fragment() {
             "    }\n" +
             "}\n"
 
+    var dependency = "implementation 'com.github.michaldrabik:TapBarMenu:1.0.6'"
+    var gradle = "allprojects {\n" +
+            "    \\n        repositories {\n" +
+            "        \\n                  google()\n" +
+            "        \\n                   jcenter()\n" +
+            "        \\n                   maven { url 'https://jitpack.io' }\n" +
+            "    \\n                                 }\n" +
+            "\\n                      }"
+
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -161,9 +172,13 @@ class TapCode : Fragment() {
 
         xmlData = view.findViewById<TextView>(R.id.xmlData)
         kotlinData = view.findViewById<TextView>(R.id.kotlinData)
+        tvTapGradle = view.findViewById<TextView>(R.id.tvTapGradle)
+        tvTapDependency = view.findViewById<TextView>(R.id.tvTapDependency)
 
         xmlData.text = TapXmlData
 
+        tvTapGradle.text = gradle
+        tvTapDependency.text = dependency
         kotlinData.text = TapKotlinData
 
         return view

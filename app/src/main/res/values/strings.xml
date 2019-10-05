@@ -3,8 +3,19 @@
     <string name="enter_title" tools:ignore="ExtraTranslation">Enter Title</string>
 
 
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="home">Home</string>
+    <string name="search">Search</string>
+    <string name="bag">Bag</string>
+    <string name="favorite">Orders</string>
+    <string name="profile">Profile</string>
+
+    <string name="enable_debug">draw debug</string>
+    <string name="add_item">add item</string>
+    <string name="remove_item">remove item</string>
+    <string name="morph_item_radius">Morph Item Radius:</string>
+    <string name="morph_corner_radius">Morph Corner Radius:</string>
+    <string name="morph_vertical_offset">Morph Vertical Offset:</string>
+    <string name="value_dp">%ddp</string>
 
 
 </resources>

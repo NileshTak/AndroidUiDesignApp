@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Activities.TapBarMenu.Fragment.TapCode">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_margin="10dp"
+            app:cardElevation="4dp"
+            app:cardCornerRadius="4dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <LinearLayout
+                    android:id="@+id/l1"
+                    android:padding="6dp"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:text="build.gradle (Dependency)"
+                        android:layout_width="wrap_content"
+                        android:textSize="16dp"
+                        android:layout_marginStart="5dp"
+                        android:textStyle="bold"
+                        android:textColor="@android:color/black"
+                        android:layout_height="wrap_content"/>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_marginStart="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:layout_marginTop="4dp"
+
+                        app:cardCornerRadius="5dp"
+                        app:cardBackgroundColor="@color/codeBG"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:id="@+id/tvReadDependency"
+
+                            android:textColor="@android:color/black"
+                            android:layout_margin="4dp"
+                            android:padding="4dp"
+                            android:textSize="16dp"
+                            android:textAlignment="center"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+
+
+                    </androidx.cardview.widget.CardView>
+
+                </LinearLayout>
+
+
+
+
+
+                <LinearLayout
+                    android:id="@+id/l2"
+
+                    android:padding="6dp"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:text="build.gradle"
+                        android:layout_width="wrap_content"
+                        android:textSize="16dp"
+                        android:layout_marginStart="5dp"
+                        android:textStyle="bold"
+                        android:textColor="@android:color/black"
+                        android:layout_height="wrap_content"/>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_marginStart="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:layout_marginTop="4dp"
+
+                        app:cardCornerRadius="5dp"
+                        app:cardBackgroundColor="@color/codeBG"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:id="@+id/tvReadGradle"
+
+                            android:textColor="@android:color/black"
+                            android:layout_margin="4dp"
+                            android:padding="4dp"
+                            android:textSize="16dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+
+
+                    </androidx.cardview.widget.CardView>
+
+                </LinearLayout>
+
+
+
+                <LinearLayout
+                    android:id="@+id/l3"
+                    android:padding="6dp"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:text="XML Code"
+                        android:layout_width="wrap_content"
+                        android:textSize="16dp"
+                        android:layout_marginStart="5dp"
+                        android:textStyle="bold"
+                        android:textColor="@android:color/black"
+                        android:layout_height="wrap_content"/>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_marginStart="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:layout_marginTop="4dp"
+                        app:cardCornerRadius="5dp"
+                        app:cardBackgroundColor="@color/codeBG"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:id="@+id/tvReadXmlData"
+                            android:textColor="@android:color/black"
+                            android:layout_margin="4dp"
+                            android:padding="4dp"
+                            android:textSize="16dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+
+
+                    </androidx.cardview.widget.CardView>
+
+                </LinearLayout>
+
+
+
+                <LinearLayout
+                    android:id="@+id/l4"
+                    android:padding="6dp"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:text="Kotlin Code"
+                        android:layout_width="wrap_content"
+                        android:textSize="16dp"
+                        android:layout_marginStart="5dp"
+                        android:textStyle="bold"
+                        android:textColor="@android:color/black"
+                        android:layout_height="wrap_content"/>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_marginStart="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:layout_marginTop="4dp"
+                        app:cardCornerRadius="5dp"
+                        app:cardBackgroundColor="@color/codeBG"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:id="@+id/tvReadKotlinData"
+                            android:textColor="@android:color/black"
+                            android:layout_margin="4dp"
+                            android:padding="4dp"
+                            android:textSize="16dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+
+
+                    </androidx.cardview.widget.CardView>
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/l5"
+                    android:padding="6dp"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:text="XML Tabs"
+                        android:layout_width="wrap_content"
+                        android:textSize="16dp"
+                        android:layout_marginStart="5dp"
+                        android:textStyle="bold"
+                        android:textColor="@android:color/black"
+                        android:layout_height="wrap_content"/>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_marginStart="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:layout_marginTop="4dp"
+                        app:cardCornerRadius="5dp"
+                        app:cardBackgroundColor="@color/codeBG"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:id="@+id/tvReadXmlTabData"
+                            android:textColor="@android:color/black"
+                            android:layout_margin="4dp"
+                            android:padding="4dp"
+                            android:textSize="16dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+
+
+                    </androidx.cardview.widget.CardView>
+
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+
+
+        </androidx.cardview.widget.CardView>
+
+
+    </androidx.core.widget.NestedScrollView>
+
+
+</RelativeLayout>

@@ -1,21 +1,17 @@
-package com.nilprojects.androiduidesign.Activities.TapBarMenu
+package com.nilprojects.androiduidesign.Activities.ReadableBottomBar
 
 import android.content.Context
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.viewpager.widget.ViewPager
 import com.google.android.material.tabs.TabLayout
-import com.nilprojects.androiduidesign.Activities.TapBarMenu.Fragment.TapCode
-import com.nilprojects.androiduidesign.Activities.TapBarMenu.Fragment.TapOutPut
-import com.nilprojects.androiduidesign.R
+import com.nilprojects.androiduidesign.Activities.ReadableBottomBar.Fragment.Code
+import com.nilprojects.androiduidesign.Activities.ReadableBottomBar.Fragment.OutputReadable
 import com.nilprojects.androiduidesign.Adapter.TabAdapter
+import com.nilprojects.androiduidesign.R
 import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper
 
-
-
-
-class TapBarMenu : AppCompatActivity() {
-
+class ReadableBottomNav : AppCompatActivity() {
 
     lateinit var tabLayout : TabLayout
     lateinit var adapter: TabAdapter
@@ -27,17 +23,17 @@ class TapBarMenu : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_tap_bar_menu)
-        supportActionBar!!.title = "Tap Bar Menu"
+        setContentView(R.layout.activity_readable_bottom_nav)
+        supportActionBar!!.title = "Readable Bottom Nav"
         val actionbar = supportActionBar
         actionbar!!.setDisplayHomeAsUpEnabled(true)
 
-        tabLayout = findViewById<TabLayout>(R.id.tabLayout)
-        viewPager = findViewById<ViewPager>(R.id.viewPager)
+        tabLayout = findViewById<TabLayout>(R.id.tabLayoutReadable)
+        viewPager = findViewById<ViewPager>(R.id.viewPagerReadable)
 
         adapter = TabAdapter(this.supportFragmentManager)
-        adapter.addFragment(TapOutPut(), "Output" )
-        adapter.addFragment(TapCode(), "Code")
+        adapter.addFragment(OutputReadable(), "Output" )
+        adapter.addFragment(Code(), "Code")
 
 
 
