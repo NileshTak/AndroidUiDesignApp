@@ -47,6 +47,10 @@
     <color name="orange_bg_light">#fff3e0</color>
     <color name="grey_bg_light">#fafafa</color>
 
+
+    <color name="toolbarColor">#eeee</color>
+    <color name="holo_gray">#717171</color>
+
     <color name="white">#ffffff</color>
 
 

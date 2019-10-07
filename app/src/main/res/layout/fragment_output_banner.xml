@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Activities.BannerSlider.Fragments.OutputBanner">
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                style="@style/CardView.SS"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <RelativeLayout
+                        android:id="@+id/container_spinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="12dp">
+
+                        <TextView
+                            android:id="@+id/text_label_page_indicator"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:text="Page Indicator: " />
+
+                        <Spinner
+                            android:id="@+id/spinner_page_indicator"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_toRightOf="@id/text_label_page_indicator" />
+                    </RelativeLayout>
+
+                    <ss.com.bannerslider.Slider
+                        android:id="@+id/banner_slider1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/container_spinner"
+                        app:slider_animateIndicators="true"
+                        app:slider_emptyView="@layout/layout_empty_view"
+                        app:slider_indicatorSize="10dp"
+                        app:slider_interval="0"
+                        app:slider_loopSlides="true"
+                        app:slider_selectedSlideIndicator="@drawable/indicator_circle_selected"
+                        app:slider_unselectedSlideIndicator="@drawable/indicator_circle_unselected" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/banner_slider1"
+                        android:orientation="vertical"
+                        android:padding="12dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="70dp">
+
+                            <ImageView
+                                android:id="@+id/image_logo"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:tint="@color/colorPrimary"
+                                android:layout_alignParentLeft="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginRight="@dimen/standard_margin"
+                                android:src="@drawable/icon_settings" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="8dp"
+                                android:layout_toRightOf="@id/image_logo"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Customization"
+                                    android:textColor="@android:color/black" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="2dp"
+                                    android:text="you can test various settings from here" />
+                            </LinearLayout>
+
+                        </RelativeLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginBottom="16dp"
+                            android:background="#ddd" />
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/standard_margin"
+                            android:layout_marginLeft="@dimen/banner_slider_settings_margin"
+                            android:layout_marginRight="@dimen/banner_slider_settings_margin">
+
+                            <TextView
+                                android:id="@+id/text_label_interval"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentStart="true"
+                                android:layout_centerVertical="true"
+                                android:text="@string/label_interval" />
+
+                            <SeekBar
+                                android:id="@+id/seekbar_interval"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_toEndOf="@id/text_label_interval" />
+
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/standard_margin"
+                            android:layout_marginLeft="@dimen/banner_slider_settings_margin"
+                            android:layout_marginRight="@dimen/banner_slider_settings_margin">
+
+                            <TextView
+                                android:id="@+id/text_label_indicator_size"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentStart="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginBottom="@dimen/standard_margin"
+                                android:text="@string/label_indicator_size" />
+
+                            <SeekBar
+                                android:id="@+id/seekbar_indicator_size"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_toEndOf="@id/text_label_indicator_size" />
+
+
+                        </RelativeLayout>
+
+                        <androidx.appcompat.widget.SwitchCompat
+                            android:id="@+id/checkbox_loop_slides"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/standard_margin"
+                            android:layout_marginLeft="@dimen/banner_slider_settings_margin"
+                            android:layout_marginRight="@dimen/banner_slider_settings_margin"
+                            android:text="@string/label_loop_slides"
+                            android:textColor="@color/holo_gray" />
+
+                        <androidx.appcompat.widget.SwitchCompat
+                            android:id="@+id/checkbox_animate_indicators"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/standard_margin"
+                            android:layout_marginLeft="@dimen/banner_slider_settings_margin"
+                            android:layout_marginRight="@dimen/banner_slider_settings_margin"
+                            android:text="@string/label_animate_indicators"
+
+                            android:textColor="@color/holo_gray" />
+
+                        <androidx.appcompat.widget.SwitchCompat
+                            android:id="@+id/checkbox_hide_indicators"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/banner_slider_settings_margin"
+                            android:layout_marginRight="@dimen/banner_slider_settings_margin"
+                            android:text="@string/label_hide_indicators"
+
+                            android:textColor="@color/holo_gray" />
+
+                    </LinearLayout>
+                </RelativeLayout>
+
+
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
+</RelativeLayout>

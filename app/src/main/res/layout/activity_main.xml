@@ -72,7 +72,7 @@
     <com.nilprojects.androiduidesign.ExpandableLayout
         android:id="@+id/expandableLayout"
         android:layout_width="match_parent"
-        android:layout_height="200dp"
+        android:layout_height="@dimen/expandableViewHeight"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         android:background="@color/cardBG"
@@ -183,24 +183,14 @@
 
         </LinearLayout>
 
-
-
-
-
-
-
-
-
-
-
-
         <LinearLayout
             android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
             <androidx.cardview.widget.CardView
-                 android:layout_width="match_parent"
+                android:id="@+id/CVSlider"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:cardCornerRadius="5dp"
                 app:cardElevation="5dp"
@@ -212,15 +202,17 @@
                     android:padding="8dp">
 
                     <ImageView
-                         android:src="@drawable/ic_ghost"
+                        android:id="@+id/imgSlider"
+                        android:src="@drawable/ic_ghost"
                         android:layout_margin="5dp"
                         android:tint="@color/colorPrimaryDark"
                         android:layout_width="25dp"
                         android:layout_height="25dp"/>
 
                     <TextView
-                        android:text="Bottom Navigation Bar"
-                         android:layout_centerVertical="true"
+                        android:text="Image Slider"
+                        android:layout_toRightOf="@+id/imgSlider"
+                        android:layout_centerVertical="true"
                         android:layout_marginStart="5dp"
                         android:textStyle="bold"
                         android:textSize="18dp"
@@ -229,7 +221,8 @@
                         android:layout_height="wrap_content"/>
 
                     <ImageView
-                         android:src="@mipmap/arrow"
+                        android:id="@+id/switcherSlider"
+                        android:src="@mipmap/arrow"
                         android:layout_alignParentRight="true"
                         android:layout_centerVertical="true"
                         android:layout_margin="5dp"
@@ -244,18 +237,20 @@
             </androidx.cardview.widget.CardView>
 
             <com.nilprojects.androiduidesign.ExpandableLayout
-                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:id="@+id/expandableLayoutSlider"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/expandableViewHeight2Item"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
-                android:background="#bb3a7a"
+                android:background="@color/cardBG"
                 android:orientation="vertical"
                 app:duration="350"
-                app:initialState="expand"
+                app:initialState="collapse"
                 app:clickToToggle="true">
 
 
                 <LinearLayout
+                    android:id="@+id/llSmarteistImageSlider"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center_vertical"
@@ -263,21 +258,23 @@
                     android:padding="5dp">
 
                     <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="20dp"
-                        android:src="@mipmap/small_sum" />
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_margin="8dp"
+                        android:src="@drawable/icon" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="10dp"
-                        android:gravity="center"
-                        android:text="14:00 pm - 15:00 pm"
-                        android:textColor="#efafd1" />
+                        android:text="Smarteist Image Slider"
+                        android:textStyle="bold"
+                        android:textSize="16dp"
+                        android:textColor="@color/white" />
                 </LinearLayout>
 
                 <LinearLayout
+                    android:id="@+id/llBannerSlider"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center_vertical"
@@ -285,68 +282,209 @@
                     android:padding="5dp">
 
                     <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="20dp"
-                        android:src="@mipmap/rain" />
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_margin="8dp"
+                        android:src="@drawable/icon" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="10dp"
-                        android:gravity="center"
-                        android:text="15:00 pm - 16:00 pm"
-                        android:textColor="#efafd1" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center_vertical"
-                    android:orientation="horizontal"
-                    android:padding="5dp">
-
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="20dp"
-                        android:src="@mipmap/thunder" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="10dp"
-                        android:gravity="center"
-                        android:text="16:00 pm - 17:00 pm"
-                        android:textColor="#efafd1" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center_vertical"
-                    android:orientation="horizontal"
-                    android:padding="5dp">
-
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="20dp"
-                        android:src="@mipmap/snow" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="10dp"
-                        android:gravity="center"
-                        android:text="17:00 pm - 18:00 pm"
-                        android:textColor="#efafd1" />
+                        android:text="Banner Slider"
+                        android:textStyle="bold"
+                        android:textSize="16dp"
+                        android:textColor="@color/white" />
                 </LinearLayout>
 
             </com.nilprojects.androiduidesign.ExpandableLayout>
 
 
         </LinearLayout>
+
+
+
+
+
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/CVPager"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="5dp"
+                app:cardElevation="5dp"
+                android:layout_margin="10dp" >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp">
+
+                    <ImageView
+                        android:id="@+id/imgPager"
+                        android:src="@drawable/ic_ghost"
+                        android:layout_margin="5dp"
+                        android:tint="@color/colorPrimaryDark"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"/>
+
+                    <TextView
+                        android:text="View Pager"
+                        android:layout_toRightOf="@+id/imgPager"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="5dp"
+                        android:textStyle="bold"
+                        android:textSize="18dp"
+                        android:textColor="@color/colorPrimary"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                    <ImageView
+                        android:id="@+id/switcherPager"
+                        android:src="@mipmap/arrow"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_margin="5dp"
+                        android:tint="@color/colorPrimary"
+                        android:layout_width="22dp"
+                        android:layout_height="22dp"/>
+
+                </RelativeLayout>
+
+
+
+            </androidx.cardview.widget.CardView>
+
+            <com.nilprojects.androiduidesign.ExpandableLayout
+                android:id="@+id/expandableLayoutPager"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/expandableViewHeight"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@color/cardBG"
+                android:orientation="vertical"
+                app:duration="350"
+                app:initialState="collapse"
+                app:clickToToggle="true">
+
+
+                <LinearLayout
+                    android:id="@+id/llCreative"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="5dp">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_margin="8dp"
+                        android:src="@drawable/icon" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="Creative View Pager"
+                        android:textStyle="bold"
+                        android:textSize="16dp"
+                        android:textColor="@color/white" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llTransViewpager"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="5dp">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_margin="8dp"
+                        android:src="@drawable/icon" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="View Pager Transformation"
+                        android:textStyle="bold"
+                        android:textSize="16dp"
+                        android:textColor="@color/white" />
+                </LinearLayout>
+
+                <!--                <LinearLayout-->
+                <!--                    android:id="@+id/llReadable"-->
+                <!--                    android:layout_width="match_parent"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:gravity="center_vertical"-->
+                <!--                    android:orientation="horizontal"-->
+                <!--                    android:padding="5dp">-->
+
+                <!--                    <ImageView-->
+                <!--                        android:layout_width="20dp"-->
+                <!--                        android:layout_height="20dp"-->
+                <!--                        android:layout_margin="8dp"-->
+                <!--                        android:src="@drawable/icon" />-->
+
+                <!--                    <TextView-->
+                <!--                        android:layout_width="wrap_content"-->
+                <!--                        android:layout_height="wrap_content"-->
+                <!--                        android:layout_marginLeft="10dp"-->
+                <!--                        android:text="Readable Bottom Nav"-->
+                <!--                        android:textStyle="bold"-->
+                <!--                        android:textSize="16dp"-->
+                <!--                        android:textColor="@color/white" />-->
+                <!--                </LinearLayout>-->
+
+                <!--                <LinearLayout-->
+                <!--                    android:id="@+id/llSimple"-->
+                <!--                    android:layout_width="match_parent"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:gravity="center_vertical"-->
+                <!--                    android:orientation="horizontal"-->
+                <!--                    android:padding="5dp">-->
+
+                <!--                    <ImageView-->
+                <!--                        android:layout_width="20dp"-->
+                <!--                        android:layout_height="20dp"-->
+                <!--                        android:layout_margin="8dp"-->
+                <!--                        android:src="@drawable/icon" />-->
+
+                <!--                    <TextView-->
+                <!--                        android:layout_width="wrap_content"-->
+                <!--                        android:layout_height="wrap_content"-->
+                <!--                        android:layout_marginLeft="10dp"-->
+                <!--                        android:text="Simple Bottom Nav"-->
+                <!--                        android:textStyle="bold"-->
+                <!--                        android:textSize="16dp"-->
+                <!--                        android:textColor="@color/white" />-->
+                <!--                </LinearLayout>-->
+
+            </com.nilprojects.androiduidesign.ExpandableLayout>
+
+
+        </LinearLayout>
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -3,6 +3,7 @@ apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 
 apply plugin: 'kotlin-android-extensions'
+apply plugin: 'com.google.gms.google-services'
 
 android {
     compileSdkVersion 29
@@ -31,6 +32,9 @@ dependencies {
     implementation 'androidx.core:core-ktx:1.1.0'
     implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'com.google.firebase:firebase-storage:16.0.4'
+    implementation 'com.google.firebase:firebase-auth:16.0.5'
+    implementation 'com.google.firebase:firebase-firestore:17.1.2'
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test:runner:1.2.0'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
@@ -41,4 +45,12 @@ dependencies {
     implementation 'uk.co.chrisjenx:calligraphy:2.3.0'
     implementation 'com.etebarian:meow-bottom-navigation:1.0.4'
     implementation 'com.github.iammert:ReadableBottomBar:0.2'
- }
+
+    implementation 'com.github.smarteist:autoimageslider:1.3.1'
+    implementation 'com.github.bumptech.glide:glide:4.0.0'
+    implementation 'com.ss.bannerslider:bannerslider:2.0.0'
+    implementation 'com.squareup.picasso:picasso:2.5.2'
+
+    implementation 'com.tbuonomo:creative-viewpager:1.0.1'
+    implementation 'com.squareup.picasso:picasso:2.71828'
+}

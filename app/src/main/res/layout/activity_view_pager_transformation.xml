@@ -1,0 +1,400 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context=".Activities.ViewPagerTransformation.ViewPagerTransformation">
+
+    <Button
+        android:id="@+id/slowTransformation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="2dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/button"
+        android:foreground="?attr/selectableItemBackground"
+        android:paddingLeft="15dp"
+        android:text="Slow Animation"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="@android:color/white"
+        android:textSize="18dp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/circularViewpagerTransformation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/slowTransformation"
+        android:layout_marginBottom="2dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="2dp"
+        android:background="@drawable/button"
+        android:foreground="?attr/selectableItemBackground"
+        android:paddingLeft="15dp"
+        android:text="Circular Viewpager"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="@android:color/white"
+        android:textSize="18dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/listTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/circularViewpagerTransformation"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp"
+        android:text="List of transformations"
+        android:textAlignment="center"
+        android:textColor="@android:color/black"
+        android:textSize="18dp"
+        android:textStyle="bold" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:layout_below="@+id/listTextView"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:paddingBottom="10dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:paddingTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <Button
+                android:id="@+id/simpleTransformation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:background="@drawable/button_background"
+                android:paddingLeft="15dp"
+                android:text="1. Simple Transformation"
+                android:textAlignment="viewStart"
+                android:textAllCaps="false"
+                android:textColor="@android:color/white"
+                android:foreground="?attr/selectableItemBackground"
+                android:textSize="18dp" />
+
+            <Button
+                android:id="@+id/depthTransformation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:background="@drawable/button_background"
+                android:paddingLeft="15dp"
+                android:text="2. Depth Transformation"
+                android:textAlignment="viewStart"
+                android:textAllCaps="false"
+                android:textColor="@android:color/white"
+                android:foreground="?attr/selectableItemBackground"
+                android:textSize="18dp" />
+
+            <Button
+                android:id="@+id/zoomOutTransformation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:background="@drawable/button_background"
+                android:paddingLeft="15dp"
+                android:text="3. Zoom Out Transformation"
+                android:textAlignment="viewStart"
+                android:textAllCaps="false"
+                android:textColor="@android:color/white"
+                android:foreground="?attr/selectableItemBackground"
+                android:textSize="18dp" />
+
+            <Button
+                android:id="@+id/clockSpinTransformation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:background="@drawable/button_background"
+                android:paddingLeft="15dp"
+                android:text="4. Clock Spin Transformation"
+                android:textAlignment="viewStart"
+                android:textAllCaps="false"
+                android:textColor="@android:color/white"
+                android:foreground="?attr/selectableItemBackground"
+                android:textSize="18dp" />
+
+            <Button
+                android:id="@+id/antiClockSpinTransformation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:background="@drawable/button_background"
+                android:paddingLeft="15dp"
+                android:text="5. AntiClock Spin Transformation"
+                android:textAlignment="viewStart"
+                android:textAllCaps="false"
+                android:textColor="@android:color/white"
+                android:foreground="?attr/selectableItemBackground"
+                android:textSize="18dp" />
+
+            <Button
+                android:id="@+id/fidgetSpinTransformation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:background="@drawable/button_background"
+                android:paddingLeft="15dp"
+                android:text="6. Fidget Spin Transformation"
+                android:textAlignment="viewStart"
+                android:textAllCaps="false"
+                android:textColor="@android:color/white"
+                android:foreground="?attr/selectableItemBackground"
+                android:textSize="18dp" />
+
+            <Button
+                android:id="@+id/verticalFlipTransformation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:background="@drawable/button_background"
+                android:paddingLeft="15dp"
+                android:text="7. Vertical Flip Transformation"
+                android:textAlignment="viewStart"
+                android:textAllCaps="false"
+                android:textColor="@android:color/white"
+                android:foreground="?attr/selectableItemBackground"
+                android:textSize="18dp" />
+
+            <Button
+                android:id="@+id/horizontalFlipTransformation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:background="@drawable/button_background"
+                android:paddingLeft="15dp"
+                android:text="8. Horizontal Flip Transformation"
+                android:textAlignment="viewStart"
+                android:textAllCaps="false"
+                android:textColor="@android:color/white"
+                android:foreground="?attr/selectableItemBackground"
+                android:textSize="18dp" />
+
+            <Button
+                android:id="@+id/popTransformation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:background="@drawable/button_background"
+                android:paddingLeft="15dp"
+                android:text="9. Pop Transformation"
+                android:textAlignment="viewStart"
+                android:textAllCaps="false"
+                android:textColor="@android:color/white"
+                android:foreground="?attr/selectableItemBackground"
+                android:textSize="18dp" />
+
+            <Button
+                android:id="@+id/fadeOutTransformation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:background="@drawable/button_background"
+                android:paddingLeft="15dp"
+                android:text="10. Fade Out Transformation"
+                android:textAlignment="viewStart"
+                android:textAllCaps="false"
+                android:textColor="@android:color/white"
+                android:foreground="?attr/selectableItemBackground"
+                android:textSize="18dp" />
+
+            <Button
+                android:id="@+id/cubeOutTransformation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:background="@drawable/button_background"
+                android:paddingLeft="15dp"
+                android:text="11. Cube Out Transformation"
+                android:textAlignment="viewStart"
+                android:textAllCaps="false"
+                android:textColor="@android:color/white"
+                android:foreground="?attr/selectableItemBackground"
+                android:textSize="18dp" />
+
+            <Button
+                android:id="@+id/cubeInTransformation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:background="@drawable/button_background"
+                android:paddingLeft="15dp"
+                android:text="12. Cube In Transformation"
+                android:textAlignment="viewStart"
+                android:textAllCaps="false"
+                android:textColor="@android:color/white"
+                android:foreground="?attr/selectableItemBackground"
+                android:textSize="18dp" />
+
+            <Button
+                android:id="@+id/cubeOutScalingTransformation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:background="@drawable/button_background"
+                android:paddingLeft="15dp"
+                android:text="13. Cube Out Scaling Transformation"
+                android:textAlignment="viewStart"
+                android:textAllCaps="false"
+                android:textColor="@android:color/white"
+                android:foreground="?attr/selectableItemBackground"
+                android:textSize="18dp" />
+
+            <Button
+                android:id="@+id/cubeInScalingTransformation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:background="@drawable/button_background"
+                android:paddingLeft="15dp"
+                android:text="14. Cube In Scaling Transformation"
+                android:textAlignment="viewStart"
+                android:textAllCaps="false"
+                android:textColor="@android:color/white"
+                android:foreground="?attr/selectableItemBackground"
+                android:textSize="18dp" />
+
+            <Button
+                android:id="@+id/cubeOutDepthTransformation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:background="@drawable/button_background"
+                android:paddingLeft="15dp"
+                android:text="15. Cube Out Depth Transformation"
+                android:textAlignment="viewStart"
+                android:textAllCaps="false"
+                android:textColor="@android:color/white"
+                android:foreground="?attr/selectableItemBackground"
+                android:textSize="18dp" />
+
+            <Button
+                android:id="@+id/cubeInDepthTransformation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:background="@drawable/button_background"
+                android:paddingLeft="15dp"
+                android:text="16. Cube In Depth Transformation"
+                android:textAlignment="viewStart"
+                android:textAllCaps="false"
+                android:textColor="@android:color/white"
+                android:foreground="?attr/selectableItemBackground"
+                android:textSize="18dp" />
+
+            <Button
+                android:id="@+id/hingeTransformation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:background="@drawable/button_background"
+                android:paddingLeft="15dp"
+                android:text="17. Hinge Transformation"
+                android:textAlignment="viewStart"
+                android:textAllCaps="false"
+                android:textColor="@android:color/white"
+                android:foreground="?attr/selectableItemBackground"
+                android:textSize="18dp" />
+
+            <Button
+                android:id="@+id/gateTransformation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:background="@drawable/button_background"
+                android:paddingLeft="15dp"
+                android:text="18. Gate Transformation"
+                android:textAlignment="viewStart"
+                android:textAllCaps="false"
+                android:textColor="@android:color/white"
+                android:foreground="?attr/selectableItemBackground"
+                android:textSize="18dp" />
+
+            <Button
+                android:id="@+id/tossTransformation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:background="@drawable/button_background"
+                android:paddingLeft="15dp"
+                android:text="19. Toss Transformation"
+                android:textAlignment="viewStart"
+                android:textAllCaps="false"
+                android:textColor="@android:color/white"
+                android:foreground="?attr/selectableItemBackground"
+                android:textSize="18dp" />
+
+            <Button
+                android:id="@+id/fanTransformation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:background="@drawable/button_background"
+                android:paddingLeft="15dp"
+                android:text="20. Fan Transformation"
+                android:textAlignment="viewStart"
+                android:textAllCaps="false"
+                android:textColor="@android:color/white"
+                android:foreground="?attr/selectableItemBackground"
+                android:textSize="18dp" />
+
+            <Button
+                android:id="@+id/spinnerTransformation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:background="@drawable/button_background"
+                android:foreground="?attr/selectableItemBackground"
+                android:paddingLeft="15dp"
+                android:text="21. Spinner Transformation"
+                android:textAlignment="viewStart"
+                android:textAllCaps="false"
+                android:textColor="@android:color/white"
+                android:textSize="18dp" />
+
+            <Button
+                android:id="@+id/verticalShutTransformation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:background="@drawable/button_background"
+                android:foreground="?attr/selectableItemBackground"
+                android:paddingLeft="15dp"
+                android:text="22. Vertical Shut Transformation"
+                android:textAlignment="viewStart"
+                android:textAllCaps="false"
+                android:textColor="@android:color/white"
+                android:textSize="18dp" />
+        </LinearLayout>
+
+    </ScrollView>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="15dp"
+        android:layout_marginRight="15dp"
+        android:src="@drawable/github_circle"
+        app:backgroundTint="@color/colorPrimaryDark"
+        app:fabSize="normal" />
+
+</RelativeLayout>
