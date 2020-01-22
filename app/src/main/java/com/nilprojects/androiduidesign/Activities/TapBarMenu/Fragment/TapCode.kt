@@ -155,12 +155,12 @@ class TapCode : Fragment() {
 
     var dependency = "implementation 'com.github.michaldrabik:TapBarMenu:1.0.6'"
     var gradle = "allprojects {\n" +
-            "    \\n        repositories {\n" +
-            "        \\n                  google()\n" +
-            "        \\n                   jcenter()\n" +
-            "        \\n                   maven { url 'https://jitpack.io' }\n" +
-            "    \\n                                 }\n" +
-            "\\n                      }"
+            "        repositories {\n" +
+            "              google()\n" +
+            "                jcenter()\n" +
+            "                   maven { url 'https://jitpack.io' }\n" +
+            "               }\n" +
+            "         }"
 
 
     override fun onCreateView(

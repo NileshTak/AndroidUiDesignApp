@@ -1,5 +1,6 @@
 package com.nilprojects.androiduidesign.Activities.ViewPagerTransformation
 
+import android.content.Context
 import android.content.Intent
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
@@ -8,6 +9,7 @@ import android.view.View
 import android.widget.Button
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.nilprojects.androiduidesign.R
+import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper
 
 class ViewPagerTransformation : AppCompatActivity(), View.OnClickListener  {
 
@@ -41,9 +43,17 @@ class ViewPagerTransformation : AppCompatActivity(), View.OnClickListener  {
 
     lateinit var floatingActionButton: FloatingActionButton
 
+
+    override fun attachBaseContext(newBase: Context?) {
+        super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase))
+    }
+
         override fun onCreate(savedInstanceState: Bundle?) {
             super.onCreate(savedInstanceState)
             setContentView(R.layout.activity_view_pager_transformation)
+            supportActionBar!!.title = "View Pager Transformation"
+            val actionbar = supportActionBar
+            actionbar!!.setDisplayHomeAsUpEnabled(true)
 
             floatingActionButton = findViewById(R.id.fab) as FloatingActionButton
             floatingActionButton.setOnClickListener(View.OnClickListener {
@@ -60,6 +70,12 @@ class ViewPagerTransformation : AppCompatActivity(), View.OnClickListener  {
             attachListner()
 
         }
+
+
+    override fun onSupportNavigateUp(): Boolean {
+        onBackPressed()
+        return true
+    }
 
         private fun intialiseButtons() {
             slow = findViewById(R.id.slowTransformation) as Button

@@ -4,6 +4,7 @@ package com.nilprojects.androiduidesign
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import android.view.animation.AccelerateDecelerateInterpolator
 import android.view.animation.BounceInterpolator
@@ -12,6 +13,7 @@ import android.widget.LinearLayout
 import androidx.appcompat.app.AppCompatActivity
 import androidx.cardview.widget.CardView
 import com.nilprojects.androiduidesign.Activities.BannerSlider.BannerSlider
+import com.nilprojects.androiduidesign.Activities.CardPreviewAnim.CardPreview
 import com.nilprojects.androiduidesign.Activities.CreativeViewPager.CreativeViewPager
 import com.nilprojects.androiduidesign.Activities.FluidBottomNav.FluidBottomNav
 import com.nilprojects.androiduidesign.Activities.SmartiestImageSlider.SmartiestImageSlider
@@ -29,11 +31,13 @@ class MainActivity : AppCompatActivity() {
         super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase))
     }
 
-    private var mExpandableLayout: ExpandableLayout? = null
+    lateinit var mExpandableLayout: ExpandableLayout
+    lateinit var mExpandableLayoutAnim: ExpandableLayout
     private var mExpandableLayoutBannerSlider: ExpandableLayout? = null
     private var mExpandableLayoutSlider: ExpandableLayout? = null
     lateinit var switcher : View
     lateinit var switcherBanner : View
+    lateinit var switcherAnim : View
     lateinit var switcherSlider : View
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -42,11 +46,13 @@ class MainActivity : AppCompatActivity() {
 
         switcher = findViewById<View>(R.id.switcher)
         switcherSlider = findViewById<View>(R.id.switcherSlider)
+        switcherAnim = findViewById<View>(R.id.switcherAnim)
 
         switcherBanner = findViewById<View>(R.id.switcherPager)
         mExpandableLayoutBannerSlider = findViewById<ExpandableLayout>(R.id.expandableLayoutPager)
 
         mExpandableLayout = findViewById<ExpandableLayout>(R.id.expandableLayout)
+        mExpandableLayoutAnim = findViewById<ExpandableLayout>(R.id.expandableLayoutAnim)
         mExpandableLayoutSlider = findViewById<ExpandableLayout>(R.id.expandableLayoutSlider)
 
 
@@ -70,7 +76,9 @@ class MainActivity : AppCompatActivity() {
 //                Log.d("ExpandableLayout", "onCollapsed")
 //            }
 //        })
+
         findViewById<CardView>(R.id.CVBottomNav).setOnClickListener(View.OnClickListener {
+
             mExpandableLayout!!.toggle() }
         )
 
@@ -80,6 +88,11 @@ class MainActivity : AppCompatActivity() {
 
         findViewById<CardView>(R.id.CVPager).setOnClickListener(View.OnClickListener {
             mExpandableLayoutBannerSlider!!.toggle() }
+        )
+
+
+        findViewById<CardView>(R.id.CVAnim).setOnClickListener(View.OnClickListener {
+            mExpandableLayoutAnim!!.toggle() }
         )
 
         findViewById<LinearLayout>(R.id.llTapBarMenu).setOnClickListener {
@@ -123,7 +136,10 @@ class MainActivity : AppCompatActivity() {
             startActivity(int)
         }
 
-
+        findViewById<LinearLayout>(R.id.llCardPreview).setOnClickListener {
+            var int = Intent(this,CardPreview :: class.java)
+            startActivity(int)
+        }
     }
 
     private fun setUpExpand() {
@@ -135,6 +151,11 @@ class MainActivity : AppCompatActivity() {
         mExpandableLayoutBannerSlider!!.setCollapseDuration(400)
 
 
+        mExpandableLayoutAnim!!.setSwitcher(switcherAnim)
+        mExpandableLayoutAnim!!.setExpandInterpolator(BounceInterpolator())
+        mExpandableLayoutAnim!!.setCollapseInterpolator(AccelerateDecelerateInterpolator())
+        mExpandableLayoutAnim!!.setExpandDuration(800)
+        mExpandableLayoutAnim!!.setCollapseDuration(400)
 
         mExpandableLayout!!.setSwitcher(switcher)
         mExpandableLayout!!.setExpandInterpolator(BounceInterpolator())

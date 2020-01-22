@@ -39,8 +39,6 @@ class TapBarMenu : AppCompatActivity() {
         adapter.addFragment(TapOutPut(), "Output" )
         adapter.addFragment(TapCode(), "Code")
 
-
-
         viewPager.setAdapter(adapter);
         tabLayout.setupWithViewPager(viewPager);
 

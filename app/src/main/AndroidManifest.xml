@@ -13,15 +13,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Activities.ViewPagerTransformation.ViewPagerTransformation"></activity>
+        <activity android:name=".Activities.CardPreviewAnim.CardPreview"
+            android:theme="@style/AppThemeNo"></activity>
+        <activity android:name=".Activities.ViewPagerTransformation.ViewPagerTransformation" />
         <activity android:name=".Activities.CreativeViewPager.CreativeViewPager" />
         <activity android:name=".Activities.BannerSlider.BannerSlider" />
         <activity android:name=".Activities.SmartiestImageSlider.SmartiestImageSlider" />
-        <activity
-            android:name=".Activities.ViewPagerTransformation.TransformationActivity"
-       />
-        <activity android:name=".Activities.ViewPagerTransformation.CircularViewPager"
-           />
+        <activity android:name=".Activities.ViewPagerTransformation.TransformationActivity" />
+        <activity android:name=".Activities.ViewPagerTransformation.CircularViewPager" />
         <activity
             android:name=".Activities.FluidBottomNav.FluidBottomNav"
             android:screenOrientation="portrait" />

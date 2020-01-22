@@ -7,9 +7,14 @@
     <dimen name="expandableViewHeight">200dp</dimen>
     <dimen name="expandableViewHeight2Item">100dp</dimen>
 
-    <dimen name="activity_horizontal_margin">16dp</dimen>
-    <dimen name="activity_vertical_margin">16dp</dimen>
     <dimen name="standard_margin">8dp</dimen>
     <dimen name="standard_margin_x2">16dp</dimen>
     <dimen name="banner_slider_settings_margin">20dp</dimen>
+
+
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <dimen name="default_margin">32dp</dimen>
+    <dimen name="circles_size">24dp</dimen>
 </resources>

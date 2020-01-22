@@ -78,7 +78,7 @@
         android:background="@color/cardBG"
         android:orientation="vertical"
         app:duration="350"
-        app:initialState="collapse"
+        app:initialState="expand"
         app:clickToToggle="true">
 
 
@@ -245,7 +245,7 @@
                 android:background="@color/cardBG"
                 android:orientation="vertical"
                 app:duration="350"
-                app:initialState="collapse"
+                app:initialState="expand"
                 app:clickToToggle="true">
 
 
@@ -369,7 +369,7 @@
                 android:background="@color/cardBG"
                 android:orientation="vertical"
                 app:duration="350"
-                app:initialState="collapse"
+                app:initialState="expand"
                 app:clickToToggle="true">
 
 
@@ -478,6 +478,102 @@
 
 
 
+
+
+
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/CVAnim"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="5dp"
+                app:cardElevation="5dp"
+                android:layout_margin="10dp" >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp">
+
+                    <ImageView
+                        android:id="@+id/imgAnim"
+                        android:src="@drawable/ic_ghost"
+                        android:layout_margin="5dp"
+                        android:tint="@color/colorPrimaryDark"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"/>
+
+                    <TextView
+                        android:text="Animation"
+                        android:layout_toRightOf="@+id/imgAnim"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="5dp"
+                        android:textStyle="bold"
+                        android:textSize="18dp"
+                        android:textColor="@color/colorPrimary"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                    <ImageView
+                        android:id="@+id/switcherAnim"
+                        android:src="@mipmap/arrow"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_margin="5dp"
+                        android:tint="@color/colorPrimary"
+                        android:layout_width="22dp"
+                        android:layout_height="22dp"/>
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <com.nilprojects.androiduidesign.ExpandableLayout
+                android:id="@+id/expandableLayoutAnim"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/expandableViewHeight2Item"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@color/cardBG"
+                android:orientation="vertical"
+                app:duration="350"
+                app:initialState="expand"
+                app:clickToToggle="true">
+
+
+                <LinearLayout
+                    android:id="@+id/llCardPreview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="5dp">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_margin="8dp"
+                        android:src="@drawable/icon" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="Card Preview"
+                        android:textStyle="bold"
+                        android:textSize="16dp"
+                        android:textColor="@color/white" />
+                </LinearLayout>
+
+            </com.nilprojects.androiduidesign.ExpandableLayout>
+
+
+        </LinearLayout>
 
 
 
