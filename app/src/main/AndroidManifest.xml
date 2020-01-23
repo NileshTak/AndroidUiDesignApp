@@ -13,8 +13,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Activities.CardPreviewAnim.CardPreview"
-            android:theme="@style/AppThemeNo"></activity>
+        <activity android:name=".Activities.Ripple.Rippleeffect"></activity>
+        <activity
+            android:name=".Activities.CardPreviewAnim.CardPreview"
+            android:theme="@style/AppThemeNo" />
         <activity android:name=".Activities.ViewPagerTransformation.ViewPagerTransformation" />
         <activity android:name=".Activities.CreativeViewPager.CreativeViewPager" />
         <activity android:name=".Activities.BannerSlider.BannerSlider" />

@@ -19,6 +19,7 @@ import com.nilprojects.androiduidesign.Activities.FluidBottomNav.FluidBottomNav
 import com.nilprojects.androiduidesign.Activities.SmartiestImageSlider.SmartiestImageSlider
 import com.nilprojects.androiduidesign.Activities.MeowBottomNav.MeowNavBottom
 import com.nilprojects.androiduidesign.Activities.ReadableBottomBar.ReadableBottomNav
+import com.nilprojects.androiduidesign.Activities.Ripple.Rippleeffect
 
 import com.nilprojects.androiduidesign.Activities.TapBarMenu.TapBarMenu
 import com.nilprojects.androiduidesign.Activities.ViewPagerTransformation.ViewPagerTransformation
@@ -102,6 +103,11 @@ class MainActivity : AppCompatActivity() {
 
         findViewById<LinearLayout>(R.id.llTransViewpager).setOnClickListener {
             var int = Intent(this,ViewPagerTransformation :: class.java)
+            startActivity(int)
+        }
+
+        findViewById<LinearLayout>(R.id.llRipple).setOnClickListener {
+            var int = Intent(this,Rippleeffect :: class.java)
             startActivity(int)
         }
 

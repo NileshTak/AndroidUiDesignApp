@@ -4,27 +4,29 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Activities.TapBarMenu.TapBarMenu">
+    tools:context=".Activities.Ripple.Rippleeffect">
 
     <com.google.android.material.tabs.TabLayout
-        android:id="@+id/tabLayout"
+        android:id="@+id/tabLayoutRipple"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+
         android:minHeight="?actionBarSize"
         app:tabGravity="fill"
+
         app:tabIconTint="@color/colorPrimary"
         app:tabRippleColor="@color/colorPrimary"
         app:tabSelectedTextColor="@color/colorPrimary"
         app:tabIndicatorColor="@color/colorPrimary"
         app:tabIndicatorHeight="4dp"
         app:tabBackground="@color/white"
-         >
+        >
     </com.google.android.material.tabs.TabLayout>
 
     <androidx.viewpager.widget.ViewPager
-        android:id="@+id/viewPager"
+        android:id="@+id/viewPagerRipple"
         android:layout_width="match_parent"
-        android:layout_below="@+id/tabLayout"
+        android:layout_below="@+id/tabLayoutRipple"
         android:layout_marginTop="10dp"
         android:layout_height="match_parent">
     </androidx.viewpager.widget.ViewPager>

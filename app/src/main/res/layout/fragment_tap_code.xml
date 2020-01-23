@@ -11,8 +11,6 @@
         android:layout_height="wrap_content">
 
 
-
-
     <androidx.cardview.widget.CardView
         android:layout_margin="10dp"
         app:cardElevation="4dp"

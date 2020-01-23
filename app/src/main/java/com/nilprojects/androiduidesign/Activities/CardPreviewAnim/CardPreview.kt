@@ -15,6 +15,7 @@ import android.widget.RelativeLayout
 import com.applikeysolutions.animation.BlurAnimation
 import com.applikeysolutions.animation.orionpreview.ScaleAnimation
 import com.applikeysolutions.animation.orionpreview.TranslationAnimation
+import com.nil.productionapp.maulifreshusers.CommonUtils.Utils
 import com.nilprojects.androiduidesign.R
 import kotlinx.android.synthetic.main.activity_card_preview.*
 import kotlinx.android.synthetic.main.product_details_card.*
@@ -71,9 +72,10 @@ class CardPreview : AppCompatActivity() {
 
         btnCode.setOnClickListener {
             val url = "https://github.com/AKTDev/Card-Preview"
-            val intentGithub = Intent(Intent.ACTION_VIEW)
-            intentGithub.data = Uri.parse(url)
-            startActivity(intentGithub)
+            Utils.navigateToGithub(url,this)
+//            val intentGithub = Intent(Intent.ACTION_VIEW)
+//            intentGithub.data = Uri.parse(url)
+//            startActivity(intentGithub)
         }
 
 
