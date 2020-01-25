@@ -8,8 +8,12 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import com.google.android.material.floatingactionbutton.FloatingActionButton
+import com.nil.productionapp.maulifreshusers.CommonUtils.Utils
 
 import com.nilprojects.androiduidesign.R
+import kotlinx.android.synthetic.main.fragment_code2.*
+import okhttp3.internal.Util
 
 class CodeRipple : Fragment() {
 
@@ -103,11 +107,17 @@ class CodeRipple : Fragment() {
         xmlData = view.findViewById<TextView>(R.id.xmlDataRip)
         kotlinData = view.findViewById<TextView>(R.id.kotlinDataRip)
         tvTapDependency = view.findViewById<TextView>(R.id.tvRipDependency)
+        var fabRipGit = view.findViewById<FloatingActionButton>(R.id.fabRipGit)
 
         xmlData.text = TapXmlData
 
         tvTapDependency.text = dependency
         kotlinData.text = TapKotlinData
+
+        fabRipGit.setOnClickListener {
+            val url = "https://github.com/skyfishjy/android-ripple-background"
+            Utils.navigateToGithub(url, kotlinData.context)
+        }
 
         return view
     }
