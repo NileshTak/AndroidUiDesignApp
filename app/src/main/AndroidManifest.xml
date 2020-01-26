@@ -24,6 +24,12 @@
             />
 
         <activity
+            android:name=".Activities.FragmentNavAnim.MainActivityNavFrag"
+            android:theme="@style/AppTheme">
+
+        </activity>
+
+        <activity
             android:name=".Activities.CardPreviewAnim.CardPreview"
             android:theme="@style/AppThemeNo" />
         <activity android:name=".Activities.ViewPagerTransformation.ViewPagerTransformation"

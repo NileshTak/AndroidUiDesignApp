@@ -16,6 +16,7 @@ import com.nilprojects.androiduidesign.Activities.BannerSlider.BannerSlider
 import com.nilprojects.androiduidesign.Activities.CardPreviewAnim.CardPreview
 import com.nilprojects.androiduidesign.Activities.CreativeViewPager.CreativeViewPager
 import com.nilprojects.androiduidesign.Activities.FluidBottomNav.FluidBottomNav
+import com.nilprojects.androiduidesign.Activities.FragmentNavAnim.MainActivityNavFrag
 import com.nilprojects.androiduidesign.Activities.SmartiestImageSlider.SmartiestImageSlider
 import com.nilprojects.androiduidesign.Activities.MeowBottomNav.MeowNavBottom
 import com.nilprojects.androiduidesign.Activities.ReadableBottomBar.ReadableBottomNav
@@ -152,6 +153,12 @@ class MainActivity : AppCompatActivity() {
             var int = Intent(this,MyActivity :: class.java)
             startActivity(int)
         }
+
+        findViewById<LinearLayout>(R.id.llFragNav).setOnClickListener {
+            var int = Intent(this,MainActivityNavFrag :: class.java)
+            startActivity(int)
+        }
+
     }
 
     private fun setUpExpand() {

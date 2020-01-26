@@ -2,6 +2,7 @@ package com.nilprojects.androiduidesign.Activities.ViewAnimation
 
 import android.animation.Animator
 import android.app.Activity
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.view.Menu
@@ -19,6 +20,7 @@ import com.daimajia.androidanimations.library.YoYo
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.nil.productionapp.maulifreshusers.CommonUtils.Utils
 import com.nilprojects.androiduidesign.R
+import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper
 
 class MyActivity : AppCompatActivity() {
 
@@ -28,10 +30,18 @@ class MyActivity : AppCompatActivity() {
     private var rope: YoYo.YoYoString? = null
     lateinit var fabGit : FloatingActionButton
 
+
+    override fun attachBaseContext(newBase: Context?) {
+        super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase))
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_my)
-        title = "View Animation"
+        supportActionBar!!.title = "View Animation"
+        val actionbar = supportActionBar
+        actionbar!!.setDisplayHomeAsUpEnabled(true)
+
 
         mListView = findViewById(R.id.list_items) as ListView
         mTarget = findViewById(R.id.hello_world)
@@ -108,5 +118,11 @@ class MyActivity : AppCompatActivity() {
             return true
         }
         return super.onOptionsItemSelected(item)
+    }
+
+
+    override fun onSupportNavigateUp(): Boolean {
+        onBackPressed()
+        return true
     }
 }

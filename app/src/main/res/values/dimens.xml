@@ -17,4 +17,5 @@
 
     <dimen name="default_margin">32dp</dimen>
     <dimen name="circles_size">24dp</dimen>
+
 </resources>
