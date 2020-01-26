@@ -22,6 +22,7 @@ import com.nilprojects.androiduidesign.Activities.ReadableBottomBar.ReadableBott
 import com.nilprojects.androiduidesign.Activities.Ripple.Rippleeffect
 
 import com.nilprojects.androiduidesign.Activities.TapBarMenu.TapBarMenu
+import com.nilprojects.androiduidesign.Activities.ViewAnimation.MyActivity
 import com.nilprojects.androiduidesign.Activities.ViewPagerTransformation.ViewPagerTransformation
 
 import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper
@@ -144,6 +145,11 @@ class MainActivity : AppCompatActivity() {
 
         findViewById<LinearLayout>(R.id.llCardPreview).setOnClickListener {
             var int = Intent(this,CardPreview :: class.java)
+            startActivity(int)
+        }
+
+        findViewById<LinearLayout>(R.id.llViewAnim).setOnClickListener {
+            var int = Intent(this,MyActivity :: class.java)
             startActivity(int)
         }
     }

@@ -4,9 +4,47 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="@android:color/white" >
+    
+    
+    <androidx.cardview.widget.CardView
+        android:id="@+id/tool"
+        android:elevation="2dp"
+        app:cardBackgroundColor="@color/colorPrimary"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"/>
+    
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="60dp"
+        android:layout_marginTop="22dp"
+        android:elevation="2dp"
+        app:civ_border_width="2dp"
+        app:civ_border_color="@color/white"
+        android:src="@drawable/ic_launcher_background"
+        android:layout_centerHorizontal="true"
+        android:layout_height="60dp"/>
 
+    <TextView
+        android:id="@+id/tvHead"
+        android:text="Bottom Navigation Bar"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/tool"
+        android:textSize="20dp"
+        android:layout_marginTop="30dp"
+        android:textColor="@color/colorPrimary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
 
-    <ScrollView
+    <androidx.cardview.widget.CardView
+        app:cardElevation="12dp"
+        android:layout_below="@id/tvHead"
+        app:cardCornerRadius="20dp"
+        android:layout_marginTop="12dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_marginTop="4dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
@@ -599,7 +637,7 @@
 
 
                 <LinearLayout
-                    android:id="@+id/llTransAnim"
+                    android:id="@+id/llViewAnim"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center_vertical"
@@ -616,7 +654,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="10dp"
-                        android:text="Ripple Background"
+                        android:text="View Animation"
                         android:textStyle="bold"
                         android:textSize="16dp"
                         android:textColor="@color/white" />
@@ -641,7 +679,9 @@
     </LinearLayout>
 
 
-    </ScrollView>
 
+
+    </androidx.core.widget.NestedScrollView>
+    </androidx.cardview.widget.CardView>
 
 </RelativeLayout>
