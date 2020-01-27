@@ -3,6 +3,7 @@
     <color name="colorPrimary">#FF005D</color>
     <color name="colorPrimaryDark">#F0206D</color>
     <color name="colorAccent">#ec407a</color>
+    <color name="lightbg">#FFD3E0</color>
     <color name="codeBG">#ffebee</color>
     <color name="cardBG">#bb3a7a</color>
 

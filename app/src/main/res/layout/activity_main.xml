@@ -12,6 +12,11 @@
         app:cardBackgroundColor="@color/colorPrimary"
         android:layout_width="match_parent"
         android:layout_height="55dp"/>
+
+    <RelativeLayout
+        android:background="@color/lightbg"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"/>
     
     <de.hdodenhof.circleimageview.CircleImageView
         android:layout_width="60dp"
@@ -29,22 +34,26 @@
         android:textStyle="bold"
         android:layout_centerHorizontal="true"
         android:layout_below="@+id/tool"
-        android:textSize="20dp"
+        android:textSize="22dp"
         android:layout_marginTop="30dp"
-        android:textColor="@color/colorPrimary"
+        android:textColor="@color/colorPrimaryDark"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
 
     <androidx.cardview.widget.CardView
+        android:id="@+id/cardview"
         app:cardElevation="12dp"
         android:layout_below="@id/tvHead"
-        app:cardCornerRadius="20dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+         android:layout_marginTop="12dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
     <androidx.core.widget.NestedScrollView
         android:layout_marginTop="4dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 

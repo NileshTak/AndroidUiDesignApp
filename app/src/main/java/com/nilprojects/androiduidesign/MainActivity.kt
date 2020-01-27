@@ -51,6 +51,9 @@ class MainActivity : AppCompatActivity() {
         switcherSlider = findViewById<View>(R.id.switcherSlider)
         switcherAnim = findViewById<View>(R.id.switcherAnim)
 
+        var cardview = findViewById<CardView>(R.id.cardview)
+        cardview.setBackgroundResource(R.drawable.card_view_home_bg);
+
         switcherBanner = findViewById<View>(R.id.switcherPager)
         mExpandableLayoutBannerSlider = findViewById<ExpandableLayout>(R.id.expandableLayoutPager)
 
