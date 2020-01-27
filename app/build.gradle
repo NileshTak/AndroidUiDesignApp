@@ -64,4 +64,6 @@ dependencies {
     compile 'com.github.yalantis:Side-Menu.Android:1.0.1'
     implementation 'com.github.ozodrukh:CircularReveal:2.1.0'
 
+    implementation 'com.github.Yalantis:Context-Menu.Android:1.1.4'
+
 }

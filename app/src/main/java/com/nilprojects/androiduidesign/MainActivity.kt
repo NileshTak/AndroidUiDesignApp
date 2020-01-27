@@ -14,6 +14,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.cardview.widget.CardView
 import com.nilprojects.androiduidesign.Activities.BannerSlider.BannerSlider
 import com.nilprojects.androiduidesign.Activities.CardPreviewAnim.CardPreview
+import com.nilprojects.androiduidesign.Activities.ContextMenu.ContextMenu
 import com.nilprojects.androiduidesign.Activities.CreativeViewPager.CreativeViewPager
 import com.nilprojects.androiduidesign.Activities.FluidBottomNav.FluidBottomNav
 import com.nilprojects.androiduidesign.Activities.FragmentNavAnim.MainActivityNavFrag
@@ -132,6 +133,11 @@ class MainActivity : AppCompatActivity() {
 
         findViewById<LinearLayout>(R.id.llMeow).setOnClickListener {
             var int = Intent(this,MeowNavBottom :: class.java)
+            startActivity(int)
+        }
+
+        findViewById<LinearLayout>(R.id.llContextMenu).setOnClickListener {
+            var int = Intent(this,ContextMenu :: class.java)
             startActivity(int)
         }
 

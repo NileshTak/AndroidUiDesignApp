@@ -60,6 +60,9 @@
         <activity android:name=".Activities.SideMenu.MainActivitySideMenu"
             android:configChanges="orientation|screenSize" />
 
+        <activity android:name=".Activities.ContextMenu.ContextMenu"
+            android:configChanges="orientation|screenSize" />
+
         <activity android:name=".MainActivity">
             android:windowSoftInputMode="stateHidden|stateAlwaysHidden">
             <intent-filter>
