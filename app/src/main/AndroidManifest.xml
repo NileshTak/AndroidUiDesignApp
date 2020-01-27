@@ -56,6 +56,10 @@
         <activity
             android:name=".Activities.TapBarMenu.TapBarMenu"
             android:theme="@style/AppTheme" />
+
+        <activity android:name=".Activities.SideMenu.MainActivitySideMenu"
+            android:configChanges="orientation|screenSize" />
+
         <activity android:name=".MainActivity">
             android:windowSoftInputMode="stateHidden|stateAlwaysHidden">
             <intent-filter>
