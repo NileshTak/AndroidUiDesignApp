@@ -64,7 +64,9 @@
     <string name="drawer_item_contact">Contact</string>
 
 
-
+    <string name="account_balance">Account Balance</string>
+    <string name="balance_currency">$</string>
+    <string name="balance_amount">524.99</string>
 
 
     <string name="toolbar_title">Light Jeans\nRegulat Fit</string>

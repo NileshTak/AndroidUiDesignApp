@@ -24,6 +24,7 @@ import com.nilprojects.androiduidesign.Activities.MikepenzeNav.MaterialDrawerAct
 import com.nilprojects.androiduidesign.Activities.ReadableBottomBar.ReadableBottomNav
 import com.nilprojects.androiduidesign.Activities.Ripple.Rippleeffect
 import com.nilprojects.androiduidesign.Activities.SideMenu.MainActivitySideMenu
+import com.nilprojects.androiduidesign.Activities.SlidingRootNav.SlidingRootNavActivity
 
 import com.nilprojects.androiduidesign.Activities.TapBarMenu.TapBarMenu
 import com.nilprojects.androiduidesign.Activities.ViewAnimation.MyActivity
@@ -145,6 +146,11 @@ class MainActivity : AppCompatActivity() {
 
         findViewById<LinearLayout>(R.id.llMaterialMenu).setOnClickListener {
             var int = Intent(this,MaterialDrawerActivity :: class.java)
+            startActivity(int)
+        }
+
+        findViewById<LinearLayout>(R.id.llSlidingRoot).setOnClickListener {
+            var int = Intent(this,SlidingRootNavActivity :: class.java)
             startActivity(int)
         }
 
