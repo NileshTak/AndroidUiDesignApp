@@ -1,0 +1,46 @@
+package com.nilprojects.androiduidesign.Activities.MikepenzeNav.customitems.overflow
+
+import android.view.MenuItem
+import androidx.appcompat.widget.PopupMenu
+import co.zsmb.materialdrawerkt.builders.Builder
+import co.zsmb.materialdrawerkt.createItem
+import co.zsmb.materialdrawerkt.draweritems.base.BaseDescribeableDrawerItemKt
+import com.nilprojects.androiduidesign.Activities.MikepenzeNav.customitems.overflow.OverflowMenuDrawerItem
+
+// Functions so that the item can be used in the appropriate parts of the DSL
+// the exact same way as a library item
+
+// For use with no params or String params
+fun Builder.overflowMenuItem(
+        name: String = "",
+        description: String? = null,
+        setup: OverflowMenuDrawerItemKt.() -> Unit): OverflowMenuDrawerItem {
+    return createItem(OverflowMenuDrawerItemKt(), name, description, setup)
+}
+
+// For use with String resource params
+fun Builder.overflowMenuItem(
+        nameRes: Int,
+        descriptionRes: Int,
+        setup: OverflowMenuDrawerItemKt.() -> Unit): OverflowMenuDrawerItem {
+    return createItem(OverflowMenuDrawerItemKt(), nameRes, descriptionRes, setup)
+}
+
+// Wrapper class for nice DSL access
+class OverflowMenuDrawerItemKt : BaseDescribeableDrawerItemKt<OverflowMenuDrawerItem>(OverflowMenuDrawerItem()) {
+
+    var menuRes: Int
+        get() = item.menu
+        set(value) {
+            item.withMenu(value)
+        }
+
+    fun onDismiss(handler: (PopupMenu) -> Unit) {
+        item.withOnDismissListener(PopupMenu.OnDismissListener { handler(it) })
+    }
+
+    fun onMenuItemClick(handler: (MenuItem) -> Boolean) {
+        item.withOnMenuItemClickListener(PopupMenu.OnMenuItemClickListener { handler(it) })
+    }
+
+}

@@ -20,6 +20,7 @@ import com.nilprojects.androiduidesign.Activities.FluidBottomNav.FluidBottomNav
 import com.nilprojects.androiduidesign.Activities.FragmentNavAnim.MainActivityNavFrag
 import com.nilprojects.androiduidesign.Activities.SmartiestImageSlider.SmartiestImageSlider
 import com.nilprojects.androiduidesign.Activities.MeowBottomNav.MeowNavBottom
+import com.nilprojects.androiduidesign.Activities.MikepenzeNav.MaterialDrawerActivity
 import com.nilprojects.androiduidesign.Activities.ReadableBottomBar.ReadableBottomNav
 import com.nilprojects.androiduidesign.Activities.Ripple.Rippleeffect
 import com.nilprojects.androiduidesign.Activities.SideMenu.MainActivitySideMenu
@@ -138,6 +139,12 @@ class MainActivity : AppCompatActivity() {
 
         findViewById<LinearLayout>(R.id.llContextMenu).setOnClickListener {
             var int = Intent(this,ContextMenu :: class.java)
+            startActivity(int)
+        }
+
+
+        findViewById<LinearLayout>(R.id.llMaterialMenu).setOnClickListener {
+            var int = Intent(this,MaterialDrawerActivity :: class.java)
             startActivity(int)
         }
 
