@@ -66,6 +66,8 @@
         <activity android:name=".Activities.SlidingRootNav.SlidingRootNavActivity"
             android:theme="@style/AppThemeNo"/>
 
+        <activity android:name=".Activities.LiquidSwipe.LiquidSwipeMainActivity"/>
+
 
         <activity
             android:name=".Activities.MikepenzeNav.MaterialDrawerActivity"

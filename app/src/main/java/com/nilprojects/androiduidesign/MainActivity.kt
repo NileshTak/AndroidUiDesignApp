@@ -18,6 +18,7 @@ import com.nilprojects.androiduidesign.Activities.ContextMenu.ContextMenu
 import com.nilprojects.androiduidesign.Activities.CreativeViewPager.CreativeViewPager
 import com.nilprojects.androiduidesign.Activities.FluidBottomNav.FluidBottomNav
 import com.nilprojects.androiduidesign.Activities.FragmentNavAnim.MainActivityNavFrag
+import com.nilprojects.androiduidesign.Activities.LiquidSwipe.LiquidSwipeMainActivity
 import com.nilprojects.androiduidesign.Activities.SmartiestImageSlider.SmartiestImageSlider
 import com.nilprojects.androiduidesign.Activities.MeowBottomNav.MeowNavBottom
 import com.nilprojects.androiduidesign.Activities.MikepenzeNav.MaterialDrawerActivity
@@ -146,6 +147,11 @@ class MainActivity : AppCompatActivity() {
 
         findViewById<LinearLayout>(R.id.llMaterialMenu).setOnClickListener {
             var int = Intent(this,MaterialDrawerActivity :: class.java)
+            startActivity(int)
+        }
+
+        findViewById<LinearLayout>(R.id.llLiquid).setOnClickListener {
+            var int = Intent(this,LiquidSwipeMainActivity :: class.java)
             startActivity(int)
         }
 
