@@ -1,4 +1,4 @@
-package com.nil.productionapp.maulifreshusers.CommonUtils
+package com.nilprojects.androiduidesign.CommonUtils
 
 import android.content.Context
 import android.content.Intent

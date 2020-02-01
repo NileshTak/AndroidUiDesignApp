@@ -18,7 +18,8 @@ import androidx.appcompat.app.AppCompatActivity
 import com.daimajia.androidanimations.library.Techniques
 import com.daimajia.androidanimations.library.YoYo
 import com.google.android.material.floatingactionbutton.FloatingActionButton
-import com.nil.productionapp.maulifreshusers.CommonUtils.Utils
+import com.nilprojects.androiduidesign.CommonUtils.Utils
+
 import com.nilprojects.androiduidesign.R
 import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper
 

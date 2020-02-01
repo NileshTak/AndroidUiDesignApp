@@ -28,6 +28,7 @@ import com.nilprojects.androiduidesign.Activities.SideMenu.MainActivitySideMenu
 import com.nilprojects.androiduidesign.Activities.SlidingRootNav.SlidingRootNavActivity
 
 import com.nilprojects.androiduidesign.Activities.TapBarMenu.TapBarMenu
+import com.nilprojects.androiduidesign.Activities.TargetPrompt.MainActivityTargetPrompt
 import com.nilprojects.androiduidesign.Activities.ViewAnimation.MyActivity
 import com.nilprojects.androiduidesign.Activities.ViewPagerTransformation.ViewPagerTransformation
 import kotlinx.android.synthetic.main.activity_main.*
@@ -147,6 +148,11 @@ class MainActivity : AppCompatActivity() {
 
         findViewById<LinearLayout>(R.id.llMaterialMenu).setOnClickListener {
             var int = Intent(this,MaterialDrawerActivity :: class.java)
+            startActivity(int)
+        }
+
+        findViewById<LinearLayout>(R.id.llTargetPrompt).setOnClickListener {
+            var int = Intent(this,MainActivityTargetPrompt :: class.java)
             startActivity(int)
         }
 

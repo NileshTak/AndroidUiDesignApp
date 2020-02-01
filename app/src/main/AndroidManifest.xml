@@ -57,6 +57,48 @@
             android:name=".Activities.TapBarMenu.TapBarMenu"
             android:theme="@style/AppTheme" />
 
+
+        <activity android:name=".Activities.TargetPrompt.MainActivityTargetPrompt"
+            android:theme="@style/AppThemeNo"/>
+
+
+        <activity
+            android:name=".Activities.TargetPrompt.DialogStyleActivity"
+            android:parentActivityName=".Activities.TargetPrompt.MainActivityTargetPrompt"
+            android:theme="@style/AppTheme.Dialog">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Activities.TargetPrompt.MainActivityTargetPrompt" />
+        </activity>
+        <activity
+            android:name=".Activities.TargetPrompt.KotlinActivity"
+            android:theme="@style/AppTheme">
+        </activity>
+        <activity
+            android:name=".Activities.TargetPrompt.CentrePositionActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+        <activity
+            android:name=".Activities.TargetPrompt.CardActivity"
+            android:label="@string/title_activity_card"
+            android:parentActivityName=".Activities.TargetPrompt.MainActivityTargetPrompt"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Activities.TargetPrompt.MainActivityTargetPrompt" />
+        </activity>
+        <activity
+            android:name=".Activities.TargetPrompt.ListActivity"
+            android:label="@string/title_activity_list_example"
+            android:parentActivityName=".Activities.TargetPrompt.MainActivityTargetPrompt"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Activities.TargetPrompt.MainActivityTargetPrompt" />
+        </activity>
+
+
+
         <activity android:name=".Activities.SideMenu.MainActivitySideMenu"
             android:configChanges="orientation|screenSize" />
 

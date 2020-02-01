@@ -1,6 +1,7 @@
 package com.nilprojects.androiduidesign.Activities.SlidingRootNav;
 
 import android.app.Fragment;
+import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.Color;
 import android.graphics.drawable.Drawable;
@@ -17,7 +18,6 @@ import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.nil.productionapp.maulifreshusers.CommonUtils.Utils;
 import com.nilprojects.androiduidesign.Activities.SlidingRootNav.fragment.CenteredTextFragment;
 import com.nilprojects.androiduidesign.Activities.SlidingRootNav.menu.DrawerAdapter;
 import com.nilprojects.androiduidesign.Activities.SlidingRootNav.menu.DrawerItem;
@@ -28,6 +28,8 @@ import com.yarolegovich.slidingrootnav.SlidingRootNav;
 import com.yarolegovich.slidingrootnav.SlidingRootNavBuilder;
 
 import java.util.Arrays;
+
+import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
 /**
  * Created by yarolegovich on 25.03.2017.
@@ -46,6 +48,10 @@ public class SlidingRootNavActivity extends AppCompatActivity implements DrawerA
 
     private SlidingRootNav slidingRootNav;
 
+    @Override
+    protected void attachBaseContext(Context newBase) {
+        super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase));
+    }
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {

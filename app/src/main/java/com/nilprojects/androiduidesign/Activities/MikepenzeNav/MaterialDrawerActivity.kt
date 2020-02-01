@@ -1,6 +1,7 @@
 package com.nilprojects.androiduidesign.Activities.MikepenzeNav
 
 import android.app.Activity
+import android.content.Context
 import android.content.Intent
 import android.graphics.Color
 import android.os.Bundle
@@ -28,18 +29,24 @@ import com.mikepenz.iconics.typeface.library.octicons.Octicons
 import com.mikepenz.materialdrawer.AccountHeader
 import com.mikepenz.materialdrawer.Drawer
 import com.mikepenz.materialdrawer.model.ProfileDrawerItem
-import com.nil.productionapp.maulifreshusers.CommonUtils.Utils
 import com.nilprojects.androiduidesign.Activities.MikepenzeNav.newactivities.*
 import com.nilprojects.androiduidesign.Activities.MikepenzeNav.originalactivities.*
+import com.nilprojects.androiduidesign.CommonUtils.Utils
 import com.nilprojects.androiduidesign.R
 import kotlinx.android.synthetic.main.activity_context_menu.*
 import kotlinx.android.synthetic.main.material_activity_main.*
+import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper
 import kotlin.reflect.KClass
 
 class MaterialDrawerActivity : AppCompatActivity() {
 
     private lateinit var result: Drawer
     private lateinit var headerResult: AccountHeader
+
+    override fun attachBaseContext(newBase: Context?) {
+        super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase))
+    }
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

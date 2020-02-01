@@ -20,6 +20,13 @@
     <color name="colorFont">#97aa43</color>
 
 
+    <color name="colorAccentPromptBackground">#F4FF4081</color>
+
+    <color name="green_200">#68EFAD</color>
+    <color name="orange_200">#FFCC80</color>
+
+    <color name="gray_300">#E0E0E0</color>
+
 
     <color name="colorTextGray">#a9a9a9</color>
     <color name="colorCircleBorder">#e3e3e3</color>

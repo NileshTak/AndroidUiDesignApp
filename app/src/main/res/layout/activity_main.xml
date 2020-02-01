@@ -30,7 +30,7 @@
 
     <TextView
         android:id="@+id/tvHead"
-        android:text="Bottom Navigation Bar"
+        android:text="@string/app_name"
         android:textStyle="bold"
         android:layout_centerHorizontal="true"
         android:layout_below="@+id/tool"
@@ -732,7 +732,7 @@
                         android:layout_height="25dp"/>
 
                     <TextView
-                        android:text="Animation"
+                        android:text="Material Design"
                         android:layout_toRightOf="@+id/imgAnim"
                         android:layout_centerVertical="true"
                         android:layout_marginStart="5dp"
@@ -759,7 +759,7 @@
             <com.nilprojects.androiduidesign.ExpandableLayout
                 android:id="@+id/expandableLayoutAnim"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/expandableViewHeight"
+                android:layout_height="300dp"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
                 android:background="@color/cardBG"
@@ -788,6 +788,32 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="10dp"
                         android:text="Card Preview"
+                        android:textStyle="bold"
+                        android:textSize="16dp"
+                        android:textColor="@color/white" />
+                </LinearLayout>
+
+
+
+                <LinearLayout
+                    android:id="@+id/llTargetPrompt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="5dp">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_margin="8dp"
+                        android:src="@drawable/icon" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="Material Tap Target Prompt"
                         android:textStyle="bold"
                         android:textSize="16dp"
                         android:textColor="@color/white" />

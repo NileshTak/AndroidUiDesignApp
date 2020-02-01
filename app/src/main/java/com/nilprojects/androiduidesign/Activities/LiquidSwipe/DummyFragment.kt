@@ -13,7 +13,7 @@ import androidx.fragment.app.Fragment
 import com.airbnb.lottie.LottieAnimationView
 import com.airbnb.lottie.LottieDrawable
 import com.google.android.material.floatingactionbutton.FloatingActionButton
-import com.nil.productionapp.maulifreshusers.CommonUtils.Utils
+
 import com.nilprojects.androiduidesign.R
 
 private const val ARG_BACKGROUND_COLOR = "param1"

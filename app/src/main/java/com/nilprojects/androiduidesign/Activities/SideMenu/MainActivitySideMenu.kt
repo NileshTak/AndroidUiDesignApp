@@ -1,6 +1,7 @@
 package com.nilprojects.androiduidesign.Activities.SideMenu
 
 import android.animation.Animator
+import android.content.Context
 import android.content.res.Configuration
 import android.graphics.Color
 import android.graphics.drawable.BitmapDrawable
@@ -15,15 +16,16 @@ import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import androidx.drawerlayout.widget.DrawerLayout
-import com.nil.productionapp.maulifreshusers.CommonUtils.Utils
 
 import com.nilprojects.androiduidesign.Activities.SideMenu.fragment.ContentFragment
+import com.nilprojects.androiduidesign.CommonUtils.Utils
 import com.nilprojects.androiduidesign.R
 
 import java.util.ArrayList
 
 import io.codetail.animation.ViewAnimationUtils
 import okhttp3.internal.Util
+import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper
 import yalantis.com.sidemenu.interfaces.Resourceble
 import yalantis.com.sidemenu.interfaces.ScreenShotable
 import yalantis.com.sidemenu.model.SlideMenuItem
@@ -37,6 +39,10 @@ class MainActivitySideMenu : AppCompatActivity(), ViewAnimator.ViewAnimatorListe
     private var viewAnimator: ViewAnimator<*>? = null
     private var res = R.drawable.content_music
     private var linearLayout: LinearLayout? = null
+
+    override fun attachBaseContext(newBase: Context?) {
+        super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase))
+    }
 
 
     override fun onCreate(savedInstanceState: Bundle?) {

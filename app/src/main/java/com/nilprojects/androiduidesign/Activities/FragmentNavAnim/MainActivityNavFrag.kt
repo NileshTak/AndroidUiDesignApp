@@ -12,7 +12,8 @@ import androidx.appcompat.app.AppCompatActivity
 
 import com.desarrollodroide.libraryfragmenttransactionextended.FragmentTransactionExtended
 import com.google.android.material.floatingactionbutton.FloatingActionButton
-import com.nil.productionapp.maulifreshusers.CommonUtils.Utils
+import com.nilprojects.androiduidesign.CommonUtils.Utils
+
 import com.nilprojects.androiduidesign.R
 import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper
 
