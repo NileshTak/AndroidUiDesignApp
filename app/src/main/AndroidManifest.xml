@@ -58,6 +58,22 @@
             android:theme="@style/AppTheme" />
 
 
+
+
+        <activity android:name=".Activities.BubbleNav.BottomBarActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"/>
+        <activity android:name=".Activities.BubbleNav.TopBarActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"/>
+        <activity android:name=".Activities.BubbleNav.EqualBottomBarActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"/>
+        <activity android:name=".Activities.BubbleNav.FloatingTopBarActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"/>
+
+
         <activity android:name=".Activities.TargetPrompt.MainActivityTargetPrompt"
             android:theme="@style/AppThemeNo"/>
 

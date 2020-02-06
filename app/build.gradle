@@ -102,4 +102,6 @@ dependencies {
     debugImplementation 'com.squareup.leakcanary:leakcanary-android:1.6.3'
     releaseImplementation 'com.squareup.leakcanary:leakcanary-android-no-op:1.6.3'
 
+    implementation 'com.gauravk.bubblenavigation:bubblenavigation:1.0.7'
+
 }

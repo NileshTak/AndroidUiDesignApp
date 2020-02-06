@@ -8,7 +8,9 @@ import com.google.android.material.tabs.TabLayout
 import com.nilprojects.androiduidesign.Activities.FluidBottomNav.Fragment.CodeSimple
 import com.nilprojects.androiduidesign.Activities.FluidBottomNav.Fragment.OutputSimple
 import com.nilprojects.androiduidesign.Adapter.TabAdapter
+import com.nilprojects.androiduidesign.CommonUtils.Utils
 import com.nilprojects.androiduidesign.R
+import kotlinx.android.synthetic.main.activity_bubble_bottom_nav.*
 import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper
 
 class FluidBottomNav : AppCompatActivity() {
@@ -36,6 +38,10 @@ class FluidBottomNav : AppCompatActivity() {
         adapter.addFragment(OutputSimple(), "Output" )
         adapter.addFragment(CodeSimple(), "Code")
 
+
+        fabBubble.setOnClickListener {
+            Utils.navigateToGithub("https://github.com/gauravk95/bubble-navigation",this@FluidBottomNav)
+        }
 
 
         viewPager.setAdapter(adapter);

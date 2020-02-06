@@ -224,6 +224,14 @@ class MainActivity : AppCompatActivity() {
     }
 
 
+    override fun onBackPressed() {
+        super.onBackPressed()
+
+//        val exitBottomSheetFragment = ExitBottomSheetFragment()
+//        exitBottomSheetFragment.show(this@MainActivity, exitBottomSheetFragment.tag)
+
+    }
+
 
 
     private fun setUpExpand() {

@@ -19,9 +19,9 @@
 
             <ImageView
                 android:id="@+id/ivAbout"
-                android:src="@drawable/ic_menu"
-                android:layout_width="40dp"
-                android:layout_marginEnd="4dp"
+                android:src="@drawable/ic_local_library_black_24dp"
+                android:layout_width="30dp"
+                android:layout_marginEnd="12dp"
                 android:layout_alignParentEnd="true"
                 android:layout_height="match_parent"/>
 
@@ -262,10 +262,9 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" 
-                android:text="Simple Bottom Nav"
+                android:text="Bubble Bottom Nav"
                 android:textStyle="bold"
                 android:textSize="16dp"
-                 
                 android:textColor="@color/white"
                 android:layout_marginLeft="5dp" />
         </LinearLayout>

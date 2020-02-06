@@ -119,6 +119,16 @@
     <string name="warn_exit">Are you sure want to Exit this App ?</string>
     <string name="example_fab_description">Displays prompt over the FAB button</string>
 
+
+    <string name="notification">Notify</string>
+    <string name="likes">Favs</string>
+    <string name="happy">Happy</string>
+    <string name="room">Room</string>
+    <string name="restaurant">Food</string>
+    <string name="shop">Shop</string>
+    <string name="photos">Pics</string>
+    <string name="call">Call</string>
+
     <string name="example_style_title">From style</string>
     <string name="example_style_description">Displays prompt over the app bar more items menu item with a style loaded from a resource</string>
 

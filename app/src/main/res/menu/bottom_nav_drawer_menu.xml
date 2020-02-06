@@ -7,6 +7,11 @@
             android:icon="@drawable/playstore"
             android:title="Rate on Google Play" />
 
+        <item
+            android:id="@+id/itemYoutube"
+            android:icon="@drawable/ic_ondemand_video_black_24dp"
+            android:title="Youtube" />
+
 
         <item
             android:id="@+id/itemExit"

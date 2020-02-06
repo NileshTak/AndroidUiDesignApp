@@ -6,6 +6,18 @@
     android:layout_height="match_parent"
     tools:context=".Activities.TapBarMenu.TapBarMenu">
 
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabBubble"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="10dp"
+        android:src="@drawable/github_circle"
+        app:backgroundTint="@color/colorPrimaryDark"
+        app:fabSize="normal" />
+
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/tabLayoutBubble"
         android:layout_width="match_parent"
