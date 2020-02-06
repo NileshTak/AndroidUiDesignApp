@@ -11,10 +11,29 @@
         android:elevation="2dp"
         app:cardBackgroundColor="@color/colorPrimary"
         android:layout_width="match_parent"
-        android:layout_height="55dp"/>
+        android:layout_height="55dp" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/ivAbout"
+                android:src="@drawable/ic_menu"
+                android:layout_width="40dp"
+                android:layout_marginEnd="4dp"
+                android:layout_alignParentEnd="true"
+                android:layout_height="match_parent"/>
+
+
+
+        </RelativeLayout>
+
+
+    </androidx.cardview.widget.CardView>
 
     <RelativeLayout
-        android:background="@drawable/bgblur"
+        android:background="@drawable/bgblurblue2"
         android:layout_width="match_parent"
         android:layout_height="300dp"/>
     

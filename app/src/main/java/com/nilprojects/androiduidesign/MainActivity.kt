@@ -5,10 +5,14 @@ import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
+import android.view.Menu
+import android.view.MenuItem
 import android.view.View
 import android.view.animation.AccelerateDecelerateInterpolator
 import android.view.animation.BounceInterpolator
+import android.widget.ImageView
 import android.widget.LinearLayout
+import android.widget.Toast
 
 import androidx.appcompat.app.AppCompatActivity
 import androidx.cardview.widget.CardView
@@ -211,7 +215,16 @@ class MainActivity : AppCompatActivity() {
             startActivity(int)
         }
 
+        findViewById<ImageView>(R.id.ivAbout).setOnClickListener {
+            val bottomNavDrawerFragment = BottomNavigationDrawerFragment()
+            bottomNavDrawerFragment.show(supportFragmentManager, bottomNavDrawerFragment.tag)
+
+        }
+
     }
+
+
+
 
     private fun setUpExpand() {
 

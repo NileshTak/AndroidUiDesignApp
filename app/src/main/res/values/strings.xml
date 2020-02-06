@@ -115,6 +115,8 @@
     <string name="example_search_description">Displays prompt over the search icon in the app bar</string>
 
     <string name="example_fab_title">FAB</string>
+
+    <string name="warn_exit">Are you sure want to Exit this App ?</string>
     <string name="example_fab_description">Displays prompt over the FAB button</string>
 
     <string name="example_style_title">From style</string>
