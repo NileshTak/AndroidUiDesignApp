@@ -58,6 +58,8 @@
             android:theme="@style/AppTheme" />
 
 
+        <activity android:name=".Activities.BottomNavCustom.CustomBottomNav"
+            android:theme="@style/AppTheme"/>
 
 
         <activity android:name=".Activities.BubbleNav.BottomBarActivity"

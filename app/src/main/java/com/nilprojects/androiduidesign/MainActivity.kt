@@ -4,19 +4,16 @@ package com.nilprojects.androiduidesign
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
-import android.util.Log
-import android.view.Menu
-import android.view.MenuItem
 import android.view.View
 import android.view.animation.AccelerateDecelerateInterpolator
 import android.view.animation.BounceInterpolator
 import android.widget.ImageView
 import android.widget.LinearLayout
-import android.widget.Toast
 
 import androidx.appcompat.app.AppCompatActivity
 import androidx.cardview.widget.CardView
 import com.nilprojects.androiduidesign.Activities.BannerSlider.BannerSlider
+import com.nilprojects.androiduidesign.Activities.BottomNavCustom.CustomBottomNav
 import com.nilprojects.androiduidesign.Activities.CardPreviewAnim.CardPreview
 import com.nilprojects.androiduidesign.Activities.ContextMenu.ContextMenu
 import com.nilprojects.androiduidesign.Activities.CreativeViewPager.CreativeViewPager
@@ -35,7 +32,6 @@ import com.nilprojects.androiduidesign.Activities.TapBarMenu.TapBarMenu
 import com.nilprojects.androiduidesign.Activities.TargetPrompt.MainActivityTargetPrompt
 import com.nilprojects.androiduidesign.Activities.ViewAnimation.MyActivity
 import com.nilprojects.androiduidesign.Activities.ViewPagerTransformation.ViewPagerTransformation
-import kotlinx.android.synthetic.main.activity_main.*
 
 import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper
 
@@ -154,6 +150,13 @@ class MainActivity : AppCompatActivity() {
             var int = Intent(this,MaterialDrawerActivity :: class.java)
             startActivity(int)
         }
+
+
+        findViewById<LinearLayout>(R.id.llCustomNav).setOnClickListener {
+            var int = Intent(this,CustomBottomNav :: class.java)
+            startActivity(int)
+        }
+
 
         findViewById<LinearLayout>(R.id.llTargetPrompt).setOnClickListener {
             var int = Intent(this,MainActivityTargetPrompt :: class.java)
