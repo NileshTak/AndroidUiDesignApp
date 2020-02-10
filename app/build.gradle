@@ -116,4 +116,6 @@ dependencies {
 
 
     compile 'com.aurelhubert:ahbottomnavigation:2.3.4'
+
+    compile 'com.github.rubensousa:floatingtoolbar:1.5.1'
 }

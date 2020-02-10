@@ -4,7 +4,7 @@
     <dimen name="default_vertical_padding">10dp</dimen>
     <dimen name="margin_medium">20dp</dimen>
     <dimen name="margin_small">20dp</dimen>
-    <dimen name="expandableViewHeight">200dp</dimen>
+    <dimen name="expandableViewHeight">250dp</dimen>
     <dimen name="expandableViewHeight2Item">100dp</dimen>
 
     <dimen name="standard_margin">8dp</dimen>
