@@ -15,8 +15,11 @@ import com.github.rubensousa.floatingtoolbar.FloatingToolbarMenuBuilder
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.android.material.snackbar.Snackbar
 import com.nilprojects.androiduidesign.CommonUtils.Utils
+ import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper
+ import androidx.core.content.ContextCompat
+import android.view.WindowManager
 import com.nilprojects.androiduidesign.R
-import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper
+
 
 class FloatingNav : AppCompatActivity(), FloatingToolbar.ItemClickListener,
     Toolbar.OnMenuItemClickListener, CustomAdapter.ClickListener, FloatingToolbar.MorphListener {
@@ -35,6 +38,17 @@ class FloatingNav : AppCompatActivity(), FloatingToolbar.ItemClickListener,
         setContentView(R.layout.floating_nav_main)
         mToolbar = findViewById(R.id.toolbar)
 
+
+        val window = this.getWindow()
+
+// clear FLAG_TRANSLUCENT_STATUS flag:
+        window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS)
+
+// add FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS flag to the window
+        window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS)
+
+// finally change the color
+        window.setStatusBarColor(ContextCompat.getColor(this, R.color.colorPrimary))
 
         val fab = findViewById<FloatingActionButton>(R.id.fabFloat)
         val recyclerView = findViewById<RecyclerView>(R.id.recyclerView)

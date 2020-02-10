@@ -6,6 +6,8 @@ import android.content.Intent
 import android.os.Build
 import android.os.Bundle
 import android.os.Handler
+import android.view.Menu
+import android.view.MenuItem
 import android.view.View
 import android.view.animation.OvershootInterpolator
 
@@ -24,6 +26,7 @@ import com.google.android.material.snackbar.Snackbar
 import com.nilprojects.androiduidesign.CommonUtils.Utils
 import com.nilprojects.androiduidesign.R
 import kotlinx.android.synthetic.main.activity_context_menu.*
+import kotlinx.android.synthetic.main.custom_nav_activity_home.*
 import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper
 
 import java.util.ArrayList
@@ -73,8 +76,28 @@ class CustomBottomNav : AppCompatActivity() {
         actionbar!!.setDisplayHomeAsUpEnabled(true)
 
 
-        fabGitContext.setOnClickListener {
-            Utils.navigateToGithub("https://github.com/Yalantis/Context-Menu.Android",this)
+//        floating_action_button.setOnClickListener {
+//            Utils.navigateToGithub("https://github.com/Yalantis/Context-Menu.Android",this)
+//        }
+    }
+
+
+    override fun onCreateOptionsMenu(menu: Menu): Boolean {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        menuInflater.inflate(R.menu.menu_main, menu)
+        return true
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        val id = item.itemId
+        when (id) {
+            R.id.action_settings -> {
+                Utils.navigateToGithub("https://github.com/aurelhubert/ahbottomnavigation",this)
+
+                return true
+            }
+
+            else -> return super.onOptionsItemSelected(item)
         }
     }
 

@@ -3,6 +3,8 @@ package com.nilprojects.androiduidesign.Activities.CreativeViewPager
 import android.content.Context
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuItem
 import androidx.viewpager.widget.ViewPager
 import com.google.android.material.tabs.TabLayout
 import com.nilprojects.androiduidesign.Activities.CreativeViewPager.Fragments.CodeCreative
@@ -10,6 +12,7 @@ import com.nilprojects.androiduidesign.Activities.CreativeViewPager.Fragments.Ou
 import com.nilprojects.androiduidesign.Activities.FluidBottomNav.Fragment.CodeSimple
 import com.nilprojects.androiduidesign.Activities.FluidBottomNav.Fragment.OutputSimple
 import com.nilprojects.androiduidesign.Adapter.TabAdapter
+import com.nilprojects.androiduidesign.CommonUtils.Utils
 import com.nilprojects.androiduidesign.R
 import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper
 
@@ -42,6 +45,26 @@ class CreativeViewPager : AppCompatActivity() {
         tabLayoutCreative.setupWithViewPager(viewPagerCreative);
 
     }
+
+    override fun onCreateOptionsMenu(menu: Menu): Boolean {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        menuInflater.inflate(R.menu.menu_main, menu)
+        return true
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        val id = item.itemId
+        when (id) {
+            R.id.action_settings -> {
+                Utils.navigateToGithub("https://github.com/tommybuonomo/creative-viewpager",this)
+
+                return true
+            }
+
+            else -> return super.onOptionsItemSelected(item)
+        }
+    }
+
 
 
 

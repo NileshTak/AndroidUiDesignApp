@@ -22,7 +22,7 @@
             android:layout_width="match_parent"
             app:title="Floating Bottom Nav"
             android:layout_height="?attr/actionBarSize"
-            android:background="@color/primary"
+            android:background="@color/colorPrimary"
             app:popupTheme="@style/AppTheme.PopupOverlay"  >
 
         </androidx.appcompat.widget.Toolbar>
@@ -33,7 +33,7 @@
         android:id="@+id/floatingToolbar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:background="@color/primary"
+        android:background="@color/colorPrimary"
         android:layout_gravity="bottom"
         app:floatingMenu="@menu/mainfloting_nav" />
 

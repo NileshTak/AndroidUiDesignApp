@@ -14,10 +14,7 @@
         android:id="@+id/fabGitContext"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentEnd="true"
         android:layout_marginBottom="10dp"
-        android:layout_marginRight="10dp"
         android:src="@drawable/github_circle"
         app:backgroundTint="@color/colorPrimaryDark"
         app:fabSize="normal" />
