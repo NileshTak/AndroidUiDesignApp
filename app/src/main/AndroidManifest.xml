@@ -16,6 +16,11 @@
         <activity android:name=".Activities.Ripple.Rippleeffect"
             android:theme="@style/AppTheme"></activity>
 
+        <activity android:name=".Activities.SpotsUi.Activity.MainActivitySpot"
+            android:theme="@style/AppThemeSpot"/>
+        <activity android:name=".Activities.SpotsUi.Activity.CartActivity"
+            android:theme="@style/AppThemeSpot"/>
+
         <activity android:name=".Activities.ViewAnimation.MyActivity"
             android:theme="@style/AppTheme"></activity>
 

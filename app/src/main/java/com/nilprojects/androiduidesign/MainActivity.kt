@@ -28,6 +28,7 @@ import com.nilprojects.androiduidesign.Activities.ReadableBottomBar.ReadableBott
 import com.nilprojects.androiduidesign.Activities.Ripple.Rippleeffect
 import com.nilprojects.androiduidesign.Activities.SideMenu.MainActivitySideMenu
 import com.nilprojects.androiduidesign.Activities.SlidingRootNav.SlidingRootNavActivity
+import com.nilprojects.androiduidesign.Activities.SpotsUi.Activity.MainActivitySpot
 
 import com.nilprojects.androiduidesign.Activities.TapBarMenu.TapBarMenu
 import com.nilprojects.androiduidesign.Activities.TargetPrompt.MainActivityTargetPrompt
@@ -124,6 +125,14 @@ class MainActivity : AppCompatActivity() {
             var int = Intent(this,TapBarMenu :: class.java)
             startActivity(int)
         }
+
+
+        findViewById<LinearLayout>(R.id.llSpotUi).setOnClickListener {
+            var int = Intent(this,MainActivitySpot :: class.java)
+            startActivity(int)
+        }
+
+
 
         findViewById<LinearLayout>(R.id.llTransViewpager).setOnClickListener {
             var int = Intent(this,ViewPagerTransformation :: class.java)
