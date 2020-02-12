@@ -129,4 +129,8 @@ dependencies {
     compile 'com.mcxiaoke.volley:library:1.0.19'
 
     compile 'com.android.support:multidex:1.0.0'
+
+
+    implementation 'com.wajahatkarim3.easyflipviewpager:easyflipviewpager:1.0.0'
+    implementation 'me.relex:circleindicator:2.1.4'
 }

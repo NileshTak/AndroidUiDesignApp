@@ -17,6 +17,7 @@ import com.nilprojects.androiduidesign.Activities.BottomNavCustom.CustomBottomNa
 import com.nilprojects.androiduidesign.Activities.CardPreviewAnim.CardPreview
 import com.nilprojects.androiduidesign.Activities.ContextMenu.ContextMenu
 import com.nilprojects.androiduidesign.Activities.CreativeViewPager.CreativeViewPager
+import com.nilprojects.androiduidesign.Activities.FlipViewpager.MainActivityFlip
 import com.nilprojects.androiduidesign.Activities.FloatingNav.FloatingNav
 import com.nilprojects.androiduidesign.Activities.FluidBottomNav.FluidBottomNav
 import com.nilprojects.androiduidesign.Activities.FragmentNavAnim.MainActivityNavFrag
@@ -129,6 +130,13 @@ class MainActivity : AppCompatActivity() {
 
         findViewById<LinearLayout>(R.id.llSpotUi).setOnClickListener {
             var int = Intent(this,MainActivitySpot :: class.java)
+            startActivity(int)
+        }
+
+
+
+        findViewById<LinearLayout>(R.id.llFlip).setOnClickListener {
+            var int = Intent(this,MainActivityFlip :: class.java)
             startActivity(int)
         }
 

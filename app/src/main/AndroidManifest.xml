@@ -28,6 +28,19 @@
             android:theme="@style/AppTheme"
             />
 
+
+        <activity
+            android:name=".Activities.FlipViewpager.BookOnboardingActivity"
+            android:theme="@style/AppThemeNo">
+        </activity>
+        <activity android:name=".Activities.FlipViewpager.PokerCardDemoActivity"
+            android:theme="@style/AppTheme"></activity>
+        <activity android:name=".Activities.FlipViewpager.PictureGalleryDemoActivity"
+            android:theme="@style/AppTheme">
+        </activity>
+        <activity android:name=".Activities.FlipViewpager.MainActivityFlip"
+            android:theme="@style/AppTheme"/>
+
         <activity
             android:name=".Activities.FragmentNavAnim.MainActivityNavFrag"
             android:theme="@style/AppTheme">
