@@ -60,7 +60,7 @@ public class HomeRecyclerViewAdapter extends RecyclerView.Adapter<HomeRecyclerVi
         viewHolder.imvPhoto.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                _activity.viewPager.setCurrentItem(1);
+                _activity.getViewPager().setCurrentItem(1);
             }
         });
         viewHolder.imvPhoto.setOnLongClickListener(new View.OnLongClickListener() {
@@ -100,7 +100,7 @@ public class HomeRecyclerViewAdapter extends RecyclerView.Adapter<HomeRecyclerVi
                 lytfourth.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
-                        _activity.viewPager.setCurrentItem(1);
+                        _activity.getViewPager().setCurrentItem(1);
                         dialog.dismiss();
                     }
                 });

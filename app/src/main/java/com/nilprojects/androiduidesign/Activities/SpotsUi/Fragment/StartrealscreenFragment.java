@@ -130,7 +130,7 @@ public class StartrealscreenFragment extends Fragment {
         );
 
 
-        mainActivity.viewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+        mainActivity.getViewPager().addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             @Override
             public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
 
@@ -138,7 +138,7 @@ public class StartrealscreenFragment extends Fragment {
 
             @Override
             public void onPageSelected(int position) {
-                if(mainActivity.viewPager.getCurrentItem()==1){
+                if(mainActivity.getViewPager().getCurrentItem()==1){
                   //  Toast.makeText(mainActivity, "toast", Toast.LENGTH_SHORT).show();
 
                     scrollView.setVisibility(View.GONE);

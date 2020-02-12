@@ -151,7 +151,7 @@ public class SartscreenFragment extends Fragment implements View.OnClickListener
             @Override
             public void onClick(View view) {
 
-                mainActivity.viewPager.setCurrentItem(0,true);
+                mainActivity.getViewPager().setCurrentItem(0,true);
             }
         });
 

@@ -100,7 +100,7 @@ public class MainFragment extends Fragment {
         imvprev.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                mainActivity.viewPager1.setCurrentItem(0, true);
+                mainActivity.getViewPager1().setCurrentItem(0, true);
             }
         });
 

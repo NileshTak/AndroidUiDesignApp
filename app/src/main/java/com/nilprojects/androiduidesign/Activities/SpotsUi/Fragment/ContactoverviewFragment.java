@@ -156,7 +156,7 @@ public class ContactoverviewFragment extends Fragment implements View.OnClickLis
             }
         });
 
-        mainActivity.viewPager1.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+        mainActivity.getViewPager1().addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             @Override
             public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
 
@@ -164,7 +164,7 @@ public class ContactoverviewFragment extends Fragment implements View.OnClickLis
 
             @Override
             public void onPageSelected(int position) {
-                if(mainActivity.viewPager1.getCurrentItem()==0){
+                if(mainActivity.getViewPager1().getCurrentItem()==0){
                     scrollView.setVisibility(View.VISIBLE);
                 }else {
                     scrollView.setVisibility(View.GONE);
