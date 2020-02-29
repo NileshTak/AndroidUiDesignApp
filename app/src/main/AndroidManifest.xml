@@ -16,6 +16,15 @@
         <activity android:name=".Activities.Ripple.Rippleeffect"
             android:theme="@style/AppTheme"></activity>
 
+
+        <activity android:name=".Activities.ExpandableView.MainActivityExpandableView"
+            android:theme="@style/AppThemeExpand"></activity>
+
+
+        <activity android:name=".Activities.Alerter.KotlinDemoActivity"
+            android:theme="@style/AppThemeAlert"></activity>
+
+
         <activity android:name=".Activities.SpotsUi.Activity.MainActivitySpot"
             android:theme="@style/AppThemeSpot"/>
         <activity android:name=".Activities.SpotsUi.Activity.CartActivity"
@@ -27,6 +36,22 @@
         <activity android:name=".Activities.ViewAnimation.ExampleActivity"
             android:theme="@style/AppTheme"
             />
+
+
+        <activity android:name=".Activities.ExpandableLayout.MainActivityExpandable"
+            android:theme="@style/AppTheme"
+            />
+
+        <activity android:name=".Activities.ExpandableLayout.CustomActivity"
+            android:theme="@style/AppTheme"
+            />
+
+
+        <activity android:name=".Activities.FoldingCell.MainActivityFoldingCell"
+            android:theme="@style/AppTheme"
+            />
+
+
 
 
         <activity

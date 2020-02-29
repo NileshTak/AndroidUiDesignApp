@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="?attr/actionBarSize"
+    tools:showIn="@layout/activity_demo">
+
+    <LinearLayout
+        android:id="@+id/content_example"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/alerter_activity_horizontal_margin"
+        android:paddingTop="@dimen/alerter_activity_vertical_margin"
+        android:paddingRight="@dimen/alerter_activity_horizontal_margin"
+        android:paddingBottom="@dimen/alerter_activity_vertical_margin"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        tools:context=".KotlinDemoActivity"
+        tools:showIn="@layout/activity_demo">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnAlertDefault"
+            style="@style/ExampleButton"
+            android:layout_width="match_parent"
+            android:background="@drawable/alert_button"
+            android:layout_height="wrap_content"
+            android:text="@string/default_alert"
+            android:textColor="@android:color/white" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnAlertColoured"
+            style="@style/ExampleButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:background="@drawable/alert_button"
+            android:text="@string/coloured_alert" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnAlertCustomIcon"
+            style="@style/ExampleButton"
+            android:layout_width="match_parent"
+            android:background="@drawable/alert_button"
+            android:layout_height="wrap_content"
+            android:text="@string/custom_icon_alert" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnAlertTextOnly"
+            style="@style/ExampleButton"
+            android:background="@drawable/alert_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/text_only_alert" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnAlertOnClick"
+            style="@style/ExampleButton"
+            android:layout_width="match_parent"
+            android:background="@drawable/alert_button"
+            android:layout_height="wrap_content"
+            android:text="@string/on_click_alert" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnAlertVerbose"
+            style="@style/ExampleButton"
+            android:background="@drawable/alert_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/verbose_alert" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnAlertCallback"
+            style="@style/ExampleButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/alert_button"
+            android:text="@string/callback_alert" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnAlertInfiniteDuration"
+            style="@style/ExampleButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/alert_button"
+            android:text="@string/infinite_alert" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnAlertWithProgress"
+            style="@style/ExampleButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/alert_button"
+            android:text="@string/progress_alert" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnAlertWithCustomFont"
+            style="@style/ExampleButton"
+            android:layout_width="match_parent"
+            android:background="@drawable/alert_button"
+            android:layout_height="wrap_content"
+            android:text="@string/custom_font" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnAlertSwipeToDismissEnabled"
+            style="@style/ExampleButton"
+            android:background="@drawable/alert_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/swipe_to_dismiss" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnAlertCustomAnimations"
+            style="@style/ExampleButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/alert_button"
+            android:text="@string/custom_enter_exit_animations" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnAlertWithButtons"
+            style="@style/ExampleButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/alert_button"
+            android:text="@string/with_buttons" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnAlertSound"
+            style="@style/ExampleButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/alert_button"
+            android:text="@string/sound_alert" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnAlertWithCustomLayout"
+            android:background="@drawable/alert_button"
+            style="@style/ExampleButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/with_custom_layout" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnCenterAlert"
+            style="@style/ExampleButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/alert_button"
+            android:text="@string/default_center_alert"
+            android:textColor="@android:color/white" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnBottomAlert"
+            style="@style/ExampleButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/alert_button"
+            android:text="@string/default_bottom_alert"
+            android:textColor="@android:color/white" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnShowAlertWithRightIcon"
+            style="@style/ExampleButton"
+            android:layout_width="match_parent"
+            android:background="@drawable/alert_button"
+            android:layout_height="wrap_content"
+            android:text="@string/with_right_icon" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnShowAlertWithOnlyRightIcon"
+            style="@style/ExampleButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/alert_button"
+            android:text="@string/with_only_right_icon" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnRightIconOnTop"
+            style="@style/ExampleButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/alert_button"
+            android:text="@string/right_icon_on_top" />
+    </LinearLayout>
+</ScrollView>

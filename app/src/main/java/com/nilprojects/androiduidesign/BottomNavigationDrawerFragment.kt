@@ -50,7 +50,7 @@ class BottomNavigationDrawerFragment: BottomSheetDialogFragment() {
                 R.id.itemRate -> {
                     val intent = Intent(
                         Intent.ACTION_VIEW,
-                        Uri.parse("https://play.google.com/store/apps/details?id=com.nil.productionapp.maulifreshusers&hl=en_IN")
+                        Uri.parse("https://play.google.com/store/apps/details?id=com.nilprojects.androiduidesign")
                     )
                     startActivity(intent)
                 }
@@ -68,6 +68,19 @@ class BottomNavigationDrawerFragment: BottomSheetDialogFragment() {
                     val exitBottomSheetFragment = ExitBottomSheetFragment()
                     exitBottomSheetFragment.show(activity!!.supportFragmentManager, exitBottomSheetFragment.tag)
 
+                }
+
+                R.id.itemShare -> {
+
+                    val sendIntent: Intent = Intent().apply {
+                        action = Intent.ACTION_SEND
+                        putExtra(Intent.EXTRA_TEXT, "Download and Install https://play.google.com/store/apps/details?id=com.nilprojects.androiduidesign for latest " +
+                                "Android UI Designs with Source Code.")
+                        type = "text/plain"
+                    }
+
+                    val shareIntent = Intent.createChooser(sendIntent, null)
+                    startActivity(shareIntent)
                 }
 
              }

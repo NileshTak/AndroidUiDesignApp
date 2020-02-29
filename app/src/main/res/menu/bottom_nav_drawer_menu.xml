@@ -14,6 +14,11 @@
 
 
         <item
+            android:id="@+id/itemShare"
+            android:icon="@drawable/share"
+            android:title="Share" />
+
+        <item
             android:id="@+id/itemExit"
             android:icon="@drawable/ic_exit_to_app_black_24dp"
             android:title="Exit" />

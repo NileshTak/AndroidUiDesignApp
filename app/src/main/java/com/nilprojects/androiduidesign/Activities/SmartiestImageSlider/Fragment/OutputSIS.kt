@@ -1,5 +1,6 @@
 package com.nilprojects.androiduidesign.Activities.SmartiestImageSlider.Fragment
 
+import android.app.ProgressDialog
 import android.content.Context
 import android.graphics.Color
 import android.net.Uri
@@ -25,6 +26,8 @@ class OutputSIS : Fragment() {
     lateinit var sliderView2: SliderView
     lateinit var arr : ArrayList<String>
 
+    lateinit var progressDialog: ProgressDialog
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -33,6 +36,12 @@ class OutputSIS : Fragment() {
         var view = inflater.inflate(R.layout.fragment_output_si, container, false)
 
         sliderView = view.findViewById<SliderView>(R.id.imageSlider)
+
+
+        progressDialog = ProgressDialog(activity)
+        progressDialog.setMessage("Wait a Sec....Fetching Images")
+        progressDialog.setCancelable(false)
+        progressDialog.show()
         sliderView2 = view.findViewById<SliderView>(R.id.imageSlider2)
 
         fetchSliderImages()
@@ -82,10 +91,12 @@ class OutputSIS : Fragment() {
                     sliderView2.setOnIndicatorClickListener { position -> sliderView.currentPagePosition = position }
 
                 }
+
+                progressDialog.dismiss()
             }
 
             .addOnFailureListener { exception ->
-                Log.w("SocietyFirestore", "Error getting documents.", exception)
+                Log.w("SocietyFirestore", "No Images Found", exception)
             }
     }
 

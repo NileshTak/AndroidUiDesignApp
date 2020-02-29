@@ -1,5 +1,6 @@
 package com.nilprojects.androiduidesign.Activities.BannerSlider.Fragments
 
+import android.app.ProgressDialog
 import android.content.Context
 import android.content.Intent
 import android.net.Uri
@@ -28,6 +29,9 @@ class OutputBanner : Fragment() {
     lateinit var spinner : Spinner
     lateinit var mustAnimateIndicators : SwitchCompat
 
+
+    lateinit var progressDialog: ProgressDialog
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -46,6 +50,12 @@ class OutputBanner : Fragment() {
         spinner = view.findViewById<Spinner>(R.id.spinner_page_indicator)
 
 
+        progressDialog = ProgressDialog(activity)
+        progressDialog.setMessage("Wait a Sec....Fetching Images")
+        progressDialog.setCancelable(false)
+        progressDialog.show()
+
+
         Slider.init(PicassoImageLoadingService(activity))
         setupViews()
 
@@ -61,7 +71,8 @@ class OutputBanner : Fragment() {
         slider!!.postDelayed(Runnable {
             slider!!.setAdapter(MainSliderAdapter())
             slider!!.setSelectedSlide(0)
-        }, 1500)
+            progressDialog.dismiss()
+        }, 1000)
 
     }
 

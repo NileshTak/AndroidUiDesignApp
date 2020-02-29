@@ -16,6 +16,69 @@
     </style>
 
 
+    <!-- Base application theme. -->
+    <style name="Base" parent="@style/Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowBackground">@drawable/background_splash</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="AppThemeAlert" parent="Base"/>
+
+
+
+
+
+    <style name="AppThemeExpand" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimaryE</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDarkE</item>
+        <item name="colorAccent">@color/colorAccentE</item>
+        <item name="alertDialogTheme">@style/AppCompatAlertDialogStyle</item>
+    </style>
+
+
+    <style name="ExampleButton" parent="Base.Widget.AppCompat.Button">
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:layout_margin">@dimen/alerter_padding_small</item>
+    </style>
+
+
+    <style name="AppCompatAlertDialogStyle" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="colorAccent">@color/colorAccentE</item>
+    </style>
+
+
+    <style name="ContentImageBadgeTitle" parent="AppTheme">
+        <item name="android:alpha">0.5</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">12dp</item>
+    </style>
+
+    <style name="ContentImageBadgeText" parent="AppTheme">
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">20dp</item>
+        <item name="android:textStyle">bold</item>
+
+    </style>
+
+    <style name="ContentMainBadgeTitle" parent="AppTheme">
+        <item name="android:textColor">@color/contentBadgeTitle</item>
+        <item name="android:textSize">12dp</item>
+    </style>
+
+    <style name="TitleBadgeText" parent="AppTheme">
+        <item name="android:textColor">@color/titleBadgeText</item>
+        <item name="android:textSize">20dp</item>
+    </style>
+
+    <style name="TitleBadgeTitle" parent="AppTheme">
+        <item name="android:textColor">@color/titleBadgeTitle</item>
+        <item name="android:textSize">12dp</item>
+    </style>
+
+
 
     <style name="BaseTheme" parent="Theme.AppCompat.Light.NoActionBar">
 

@@ -7,6 +7,9 @@
     <dimen name="expandableViewHeight">250dp</dimen>
     <dimen name="expandableViewHeight2Item">100dp</dimen>
 
+
+    <dimen name="custom_icon_size">72dp</dimen>
+
     <dimen name="standard_margin">8dp</dimen>
     <dimen name="standard_margin_x2">16dp</dimen>
     <dimen name="banner_slider_settings_margin">20dp</dimen>

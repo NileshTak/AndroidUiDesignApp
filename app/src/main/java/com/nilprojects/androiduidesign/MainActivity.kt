@@ -12,14 +12,19 @@ import android.widget.LinearLayout
 
 import androidx.appcompat.app.AppCompatActivity
 import androidx.cardview.widget.CardView
+import com.nilprojects.androiduidesign.Activities.Alerter.KotlinDemoActivity
 import com.nilprojects.androiduidesign.Activities.BannerSlider.BannerSlider
 import com.nilprojects.androiduidesign.Activities.BottomNavCustom.CustomBottomNav
 import com.nilprojects.androiduidesign.Activities.CardPreviewAnim.CardPreview
 import com.nilprojects.androiduidesign.Activities.ContextMenu.ContextMenu
 import com.nilprojects.androiduidesign.Activities.CreativeViewPager.CreativeViewPager
+import com.nilprojects.androiduidesign.Activities.ExpandableLayout.CustomActivity
+import com.nilprojects.androiduidesign.Activities.ExpandableLayout.MainActivityExpandable
+import com.nilprojects.androiduidesign.Activities.ExpandableView.MainActivityExpandableView
 import com.nilprojects.androiduidesign.Activities.FlipViewpager.MainActivityFlip
 import com.nilprojects.androiduidesign.Activities.FloatingNav.FloatingNav
 import com.nilprojects.androiduidesign.Activities.FluidBottomNav.FluidBottomNav
+import com.nilprojects.androiduidesign.Activities.FoldingCell.MainActivityFoldingCell
 import com.nilprojects.androiduidesign.Activities.FragmentNavAnim.MainActivityNavFrag
 import com.nilprojects.androiduidesign.Activities.LiquidSwipe.LiquidSwipeMainActivity
 import com.nilprojects.androiduidesign.Activities.SmartiestImageSlider.SmartiestImageSlider
@@ -47,6 +52,7 @@ class MainActivity : AppCompatActivity() {
     lateinit var mExpandableLayout: ExpandableLayout
     lateinit var mExpandableLayoutAnim: ExpandableLayout
     private var mExpandableLayoutBannerSlider: ExpandableLayout? = null
+    private var expandableLayoutExpand1: ExpandableLayout? = null
     private var mExpandableLayoutSlider: ExpandableLayout? = null
 
     lateinit var expandableLayoutMenu : ExpandableLayout
@@ -55,6 +61,7 @@ class MainActivity : AppCompatActivity() {
     lateinit var switcherBanner : View
     lateinit var switcherAnim : View
     lateinit var switcherSlider : View
+    lateinit var switcherExp1 : View
 
     lateinit var switcherMenu : View
 
@@ -66,6 +73,7 @@ class MainActivity : AppCompatActivity() {
         switcherSlider = findViewById<View>(R.id.switcherSlider)
         switcherMenu = findViewById<View>(R.id.switcherMenu)
         switcherAnim = findViewById<View>(R.id.switcherAnim)
+        switcherExp1 = findViewById<View>(R.id.switcherExp1)
 
         var cardview = findViewById<CardView>(R.id.cardview)
         cardview.setBackgroundResource(R.drawable.card_view_home_bg);
@@ -77,6 +85,8 @@ class MainActivity : AppCompatActivity() {
         mExpandableLayout = findViewById<ExpandableLayout>(R.id.expandableLayout)
         mExpandableLayoutAnim = findViewById<ExpandableLayout>(R.id.expandableLayoutAnim)
         mExpandableLayoutSlider = findViewById<ExpandableLayout>(R.id.expandableLayoutSlider)
+
+        expandableLayoutExpand1 = findViewById<ExpandableLayout>(R.id.expandableLayoutExpand1)
 
 
         setUpExpand()
@@ -122,8 +132,30 @@ class MainActivity : AppCompatActivity() {
             mExpandableLayoutAnim!!.toggle() }
         )
 
+
+
+        findViewById<CardView>(R.id.CVExpand).setOnClickListener(View.OnClickListener {
+            expandableLayoutExpand1!!.toggle() }
+        )
+
         findViewById<LinearLayout>(R.id.llTapBarMenu).setOnClickListener {
             var int = Intent(this,TapBarMenu :: class.java)
+            startActivity(int)
+        }
+
+
+        findViewById<LinearLayout>(R.id.llExpandableLayout).setOnClickListener {
+            var int = Intent(this,CustomActivity :: class.java)
+            startActivity(int)
+        }
+
+        findViewById<LinearLayout>(R.id.llFoldingCell).setOnClickListener {
+            var int = Intent(this,MainActivityFoldingCell :: class.java)
+            startActivity(int)
+        }
+
+        findViewById<LinearLayout>(R.id.llAlert).setOnClickListener {
+            var int = Intent(this,KotlinDemoActivity :: class.java)
             startActivity(int)
         }
 
@@ -133,10 +165,14 @@ class MainActivity : AppCompatActivity() {
             startActivity(int)
         }
 
-
-
         findViewById<LinearLayout>(R.id.llFlip).setOnClickListener {
             var int = Intent(this,MainActivityFlip :: class.java)
+            startActivity(int)
+        }
+
+
+        findViewById<LinearLayout>(R.id.llExpandingView).setOnClickListener {
+            var int = Intent(this,MainActivityExpandableView :: class.java)
             startActivity(int)
         }
 
@@ -268,6 +304,13 @@ class MainActivity : AppCompatActivity() {
         mExpandableLayoutBannerSlider!!.setCollapseInterpolator(AccelerateDecelerateInterpolator())
         mExpandableLayoutBannerSlider!!.setExpandDuration(800)
         mExpandableLayoutBannerSlider!!.setCollapseDuration(400)
+
+
+        expandableLayoutExpand1!!.setSwitcher(switcherExp1)
+        expandableLayoutExpand1!!.setExpandInterpolator(BounceInterpolator())
+        expandableLayoutExpand1!!.setCollapseInterpolator(AccelerateDecelerateInterpolator())
+        expandableLayoutExpand1!!.setExpandDuration(800)
+        expandableLayoutExpand1!!.setCollapseDuration(400)
 
 
         mExpandableLayoutAnim!!.setSwitcher(switcherAnim)

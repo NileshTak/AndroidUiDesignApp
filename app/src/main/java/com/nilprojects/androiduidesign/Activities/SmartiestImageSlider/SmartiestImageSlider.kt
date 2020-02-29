@@ -1,5 +1,6 @@
 package com.nilprojects.androiduidesign.Activities.SmartiestImageSlider
 
+import android.app.ProgressDialog
 import android.content.Context
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -20,6 +21,7 @@ class SmartiestImageSlider : AppCompatActivity() {
 
     lateinit var tabLayoutSIS : TabLayout
     lateinit var adapter: TabAdapter
+
     lateinit var  viewPagerSIS: ViewPager
 
     override fun attachBaseContext(newBase: Context?) {
@@ -34,6 +36,8 @@ class SmartiestImageSlider : AppCompatActivity() {
         supportActionBar!!.title = "Smarteist Image Slider"
         val actionbar = supportActionBar
         actionbar!!.setDisplayHomeAsUpEnabled(true)
+
+
 
         tabLayoutSIS = findViewById<TabLayout>(R.id.tabLayoutSIS)
         viewPagerSIS = findViewById<ViewPager>(R.id.viewPagerSIS)

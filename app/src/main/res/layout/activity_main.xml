@@ -70,7 +70,6 @@
 
     <androidx.core.widget.NestedScrollView
         android:layout_marginTop="4dp"
-         
         android:layout_marginEnd="5dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
@@ -398,7 +397,7 @@
             <com.nilprojects.androiduidesign.ExpandableLayout
                 android:id="@+id/expandableLayoutMenu"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/expandableViewHeight"
+                android:layout_height="200dp"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
                 android:background="@color/colorPrimaryDark"
@@ -533,6 +532,8 @@
                 android:textColor="@color/white"
                 android:layout_marginLeft="5dp" />
                 </LinearLayout>
+
+
 
 
 
@@ -749,7 +750,7 @@
             <com.nilprojects.androiduidesign.ExpandableLayout
                 android:id="@+id/expandableLayoutPager"
                 android:layout_width="match_parent"
-                android:layout_height="200dp"
+                android:layout_height="180dp"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
                 android:background="@color/colorPrimaryDark"
@@ -1172,6 +1173,35 @@
 
 
 
+                <LinearLayout
+                    android:id="@+id/llAlert"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="5dp">
+
+                    <com.airbnb.lottie.LottieAnimationView
+
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        app:lottie_colorFilter="@color/white"
+                        app:lottie_autoPlay="true"
+                        app:lottie_fileName="item.json"
+                        app:lottie_loop="true" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Alert Dialog"
+                        android:textStyle="bold"
+                        android:textSize="16dp"
+                        android:textColor="@color/white"
+                        android:layout_marginLeft="5dp" />
+                </LinearLayout>
+
+
+
             </com.nilprojects.androiduidesign.ExpandableLayout>
 
 
@@ -1180,16 +1210,169 @@
 
 
 
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/CVExpand"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="5dp"
+                app:cardElevation="5dp"
+                android:layout_margin="10dp" >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp">
+
+                    <!--            <ImageView-->
+                    <!--                android:id="@+id/img1"-->
+                    <!--                android:src="@drawable/ic_ghost"-->
+                    <!--                android:layout_margin="5dp"-->
+                    <!--                android:tint="@color/colorPrimaryDark"-->
+                    <!--                android:layout_width="25dp"-->
+                    <!--                android:layout_height="25dp"/>-->
+
+                    <com.airbnb.lottie.LottieAnimationView
+                        android:id="@+id/imgE1"
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
+                        app:lottie_autoPlay="true"
+                        app:lottie_fileName="parent.json"
+                        app:lottie_loop="true" />
+
+
+                    <TextView
+                        android:text="Expandable Layout"
+                        android:layout_toRightOf="@+id/imgE1"
+                        android:layout_centerVertical="true"
+                        android:textStyle="bold"
+                        android:textSize="18dp"
+                        android:textColor="@color/colorPrimary"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                    <ImageView
+                        android:id="@+id/switcherExp1"
+                        android:src="@mipmap/arrow"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_margin="5dp"
+                        android:tint="@color/colorPrimary"
+                        android:layout_width="22dp"
+                        android:layout_height="22dp"/>
+
+                </RelativeLayout>
 
 
 
+            </androidx.cardview.widget.CardView>
+
+            <com.nilprojects.androiduidesign.ExpandableLayout
+                android:id="@+id/expandableLayoutExpand1"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@color/colorPrimaryDark"
+                android:orientation="vertical"
+                app:duration="350"
+                app:initialState="expand"
+                app:clickToToggle="true">
+
+
+            <LinearLayout
+                android:id="@+id/llFoldingCell"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="5dp">
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    app:lottie_colorFilter="@color/white"
+                    app:lottie_autoPlay="true"
+                    app:lottie_fileName="item.json"
+                    app:lottie_loop="true" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Folding Cell"
+                    android:textStyle="bold"
+                    android:textSize="16dp"
+                    android:textColor="@color/white"
+                    android:layout_marginLeft="5dp" />
+            </LinearLayout>
 
 
 
+                <LinearLayout
+                    android:id="@+id/llExpandingView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="5dp">
 
-    </LinearLayout>
+                    <com.airbnb.lottie.LottieAnimationView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        app:lottie_colorFilter="@color/white"
+                        app:lottie_autoPlay="true"
+                        app:lottie_fileName="item.json"
+                        app:lottie_loop="true" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Expanding View"
+                        android:textStyle="bold"
+                        android:textSize="16dp"
+                        android:textColor="@color/white"
+                        android:layout_marginLeft="5dp" />
+                </LinearLayout>
 
 
+                <LinearLayout
+                    android:id="@+id/llExpandableLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="5dp">
+
+                    <com.airbnb.lottie.LottieAnimationView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        app:lottie_colorFilter="@color/white"
+                        app:lottie_autoPlay="true"
+                        app:lottie_fileName="item.json"
+                        app:lottie_loop="true" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Expandable Layout"
+                        android:textStyle="bold"
+                        android:textSize="16dp"
+                        android:textColor="@color/white"
+                        android:layout_marginLeft="5dp" />
+                </LinearLayout>
+
+
+                '
+            </com.nilprojects.androiduidesign.ExpandableLayout>
+
+        </LinearLayout>
+
+
+        </LinearLayout>
 
 
     </androidx.core.widget.NestedScrollView>

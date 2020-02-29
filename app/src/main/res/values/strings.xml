@@ -27,6 +27,57 @@
 
 
 
+    <string name="title_activity_example">Alerter Demo</string>
+    <string name="default_alert">Default Alert</string>
+    <string name="coloured_alert">Coloured Alert</string>
+    <string name="text_only_alert">Text Only Alert</string>
+    <string name="on_click_alert">On Click Alert</string>
+    <string name="verbose_alert">Verbose Alert</string>
+    <string name="custom_icon_alert">Custom Icon Alert</string>
+    <string name="callback_alert">Alert Callbacks</string>
+    <string name="infinite_alert">Infinity Duration Alert</string>
+    <string name="progress_alert">Progress Alert</string>
+    <string name="custom_font">Custom Font</string>
+    <string name="swipe_to_dismiss">Swipe To Dismiss Alert</string>
+    <string name="custom_enter_exit_animations">Custom Enter/Exit Animations</string>
+    <string name="with_buttons">With Buttons</string>
+    <string name="sound_alert">Alert Sound</string>
+    <string name="asset_statements" translatable="false">[{\n  \"relation\": [\"delegate_permission/common.handle_all_urls\"],\n  \"target\": {\n    \"namespace\": \"web\",\n    \"site\": \"https://apps.tapadoo.com\",\n  }\n}]</string>
+    <string name="with_custom_layout">With Custom Layout</string>
+    <string name="default_bottom_alert">Default Bottom Alert</string>
+    <string name="default_center_alert">Default Center Alert</string>
+    <string name="with_right_icon">With Right Icon</string>
+    <string name="with_only_right_icon">With Only Right Icon</string>
+    <string name="right_icon_on_top">Right icon on top</string>
+
+
+    <string name="order_id_mock" translatable="false"># 1234–5678</string>
+    <string name="price_mock" translatable="false">$25</string>
+    <string name="requests_count_mock" translatable="false">5</string>
+    <string name="requests_count_badge" translatable="false">REQUESTS</string>
+    <string name="weight_mock" translatable="false">50 oz</string>
+    <string name="weight_badge" translatable="false">WEIGHT</string>
+    <string name="pledge_mock" translatable="false">$150</string>
+    <string name="pledge_badge" translatable="false">PLEDGE</string>
+    <string name="sender_badge" translatable="false">SENDER</string>
+    <string name="client_name_mock" translatable="false">Edward Norton</string>
+    <string name="rating_mock" translatable="false">(26)</string>
+    <string name="from_badge" translatable="false">FROM</string>
+    <string name="to_badge" translatable="false">TO</string>
+    <string name="delivery_date_badge" translatable="false">DELIVERY DATE</string>
+    <string name="delivery_time_mock" translatable="false">6:30 pm</string>
+    <string name="delivery_date_mock" translatable="false">May 16, 2016</string>
+    <string name="deadline_badge" translatable="false">REQUEST DEADLINE</string>
+    <string name="deadline_time_mock" translatable="false">24 minutes</string>
+    <string name="request_btn_text" translatable="false">REQUEST</string>
+    <string name="btn_annotation_mock" translatable="false">5 people have sent a request</string>
+    <string name="content_from1_mock">W 90th St</string>
+    <string name="content_from2_mock">New York, NY 10025</string>
+    <string name="content_to1_mock">46th Ave</string>
+    <string name="content_to2_mock">Woodside, NY 11101</string>
+    <string name="title_activity_main2">Main2Activity</string>
+
+
 
     <string name="search_desc">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod</string>
     <string name="ok">Okay</string>
