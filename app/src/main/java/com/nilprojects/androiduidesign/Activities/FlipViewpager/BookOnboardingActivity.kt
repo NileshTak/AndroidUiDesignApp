@@ -1,5 +1,6 @@
 package com.nilprojects.androiduidesign.Activities.FlipViewpager
 
+import android.content.Context
 import android.graphics.Color
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
@@ -11,11 +12,17 @@ import androidx.viewpager.widget.ViewPager
 import com.nilprojects.androiduidesign.R
 import com.wajahatkarim3.easyflipviewpager.BookFlipPageTransformer
 import com.wajahatkarim3.easyflipviewpager.CardFlipPageTransformer
+import io.github.inflationx.viewpump.ViewPumpContextWrapper
 
 class BookOnboardingActivity : AppCompatActivity() {
 
     private lateinit var mPager: ViewPager
     private var mPagerAdapter: PagerAdapter? = null
+
+    override fun attachBaseContext(newBase: Context) {
+        super.attachBaseContext(ViewPumpContextWrapper.wrap(newBase))
+    }
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

@@ -41,12 +41,15 @@ import com.nilprojects.androiduidesign.Activities.TargetPrompt.MainActivityTarge
 import com.nilprojects.androiduidesign.Activities.ViewAnimation.MyActivity
 import com.nilprojects.androiduidesign.Activities.ViewPagerTransformation.ViewPagerTransformation
 
-import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper
+import io.github.inflationx.viewpump.ViewPumpContextWrapper
+
+
+
 
 class MainActivity : AppCompatActivity() {
 
-    override fun attachBaseContext(newBase: Context?) {
-        super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase))
+    override fun attachBaseContext(newBase: Context) {
+        super.attachBaseContext(ViewPumpContextWrapper.wrap(newBase))
     }
 
     lateinit var mExpandableLayout: ExpandableLayout
@@ -288,12 +291,9 @@ class MainActivity : AppCompatActivity() {
 
 
     override fun onBackPressed() {
-        super.onBackPressed()
-
-//        val exitBottomSheetFragment = ExitBottomSheetFragment()
-//        exitBottomSheetFragment.show(this@MainActivity, exitBottomSheetFragment.tag)
-
-    }
+         val exitBottomSheetFragment = ExitBottomSheetFragment()
+        exitBottomSheetFragment.show(this@MainActivity.supportFragmentManager, exitBottomSheetFragment.tag)
+   }
 
 
 

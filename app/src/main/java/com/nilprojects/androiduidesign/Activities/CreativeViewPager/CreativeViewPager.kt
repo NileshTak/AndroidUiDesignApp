@@ -14,7 +14,7 @@ import com.nilprojects.androiduidesign.Activities.FluidBottomNav.Fragment.Output
 import com.nilprojects.androiduidesign.Adapter.TabAdapter
 import com.nilprojects.androiduidesign.CommonUtils.Utils
 import com.nilprojects.androiduidesign.R
-import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper
+import io.github.inflationx.viewpump.ViewPumpContextWrapper
 
 class CreativeViewPager : AppCompatActivity() {
 
@@ -22,9 +22,10 @@ class CreativeViewPager : AppCompatActivity() {
     lateinit var adapter: TabAdapter
     lateinit var  viewPagerCreative: ViewPager
 
-    override fun attachBaseContext(newBase: Context?) {
-        super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase))
+    override fun attachBaseContext(newBase: Context) {
+        super.attachBaseContext(ViewPumpContextWrapper.wrap(newBase))
     }
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

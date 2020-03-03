@@ -33,9 +33,9 @@ import com.nilprojects.androiduidesign.Activities.MikepenzeNav.newactivities.*
 import com.nilprojects.androiduidesign.Activities.MikepenzeNav.originalactivities.*
 import com.nilprojects.androiduidesign.CommonUtils.Utils
 import com.nilprojects.androiduidesign.R
+import io.github.inflationx.viewpump.ViewPumpContextWrapper
 import kotlinx.android.synthetic.main.activity_context_menu.*
 import kotlinx.android.synthetic.main.material_activity_main.*
-import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper
 import kotlin.reflect.KClass
 
 class MaterialDrawerActivity : AppCompatActivity() {
@@ -43,9 +43,10 @@ class MaterialDrawerActivity : AppCompatActivity() {
     private lateinit var result: Drawer
     private lateinit var headerResult: AccountHeader
 
-    override fun attachBaseContext(newBase: Context?) {
-        super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase))
+    override fun attachBaseContext(newBase: Context) {
+        super.attachBaseContext(ViewPumpContextWrapper.wrap(newBase))
     }
+
 
 
     override fun onCreate(savedInstanceState: Bundle?) {

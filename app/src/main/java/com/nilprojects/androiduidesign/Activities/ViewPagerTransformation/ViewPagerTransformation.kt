@@ -9,7 +9,10 @@ import android.view.View
 import android.widget.Button
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.nilprojects.androiduidesign.R
-import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper
+import io.github.inflationx.viewpump.ViewPumpContextWrapper
+
+
+
 
 class ViewPagerTransformation : AppCompatActivity(), View.OnClickListener  {
 
@@ -44,8 +47,8 @@ class ViewPagerTransformation : AppCompatActivity(), View.OnClickListener  {
     lateinit var floatingActionButton: FloatingActionButton
 
 
-    override fun attachBaseContext(newBase: Context?) {
-        super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase))
+    override fun attachBaseContext(newBase: Context) {
+        super.attachBaseContext(ViewPumpContextWrapper.wrap(newBase))
     }
 
         override fun onCreate(savedInstanceState: Bundle?) {

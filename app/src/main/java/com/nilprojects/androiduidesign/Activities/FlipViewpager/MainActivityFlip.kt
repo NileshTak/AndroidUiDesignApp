@@ -18,15 +18,16 @@ import com.nilprojects.androiduidesign.CommonUtils.Utils
 import com.nilprojects.androiduidesign.R
 import com.wajahatkarim3.easyflipviewpager.BookFlipPageTransformer
 import com.wajahatkarim3.easyflipviewpager.CardFlipPageTransformer
-import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper
+import io.github.inflationx.viewpump.ViewPumpContextWrapper
 
 class MainActivityFlip : AppCompatActivity() {
 
 
 
-    override fun attachBaseContext(newBase: Context?) {
-        super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase))
+    override fun attachBaseContext(newBase: Context) {
+        super.attachBaseContext(ViewPumpContextWrapper.wrap(newBase))
     }
+
 
     private lateinit var mPager: ViewPager
     private var mPagerAdapter: PagerAdapter? = null

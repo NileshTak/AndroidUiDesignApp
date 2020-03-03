@@ -28,14 +28,15 @@ import com.diegodobelo.expandingview.ExpandingItem
 import com.diegodobelo.expandingview.ExpandingList
 import com.nilprojects.androiduidesign.CommonUtils.Utils
 import com.nilprojects.androiduidesign.R
-import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper
+import io.github.inflationx.viewpump.ViewPumpContextWrapper
 
 class MainActivityExpandableView : AppCompatActivity() {
 
 
-    override fun attachBaseContext(newBase: Context?) {
-        super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase))
+    override fun attachBaseContext(newBase: Context) {
+        super.attachBaseContext(ViewPumpContextWrapper.wrap(newBase))
     }
+
 
     private var mExpandingList: ExpandingList? = null
 

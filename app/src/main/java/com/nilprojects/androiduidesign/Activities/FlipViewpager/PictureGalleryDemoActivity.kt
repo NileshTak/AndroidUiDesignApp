@@ -1,6 +1,7 @@
 package com.nilprojects.androiduidesign.Activities.FlipViewpager
 
 
+import android.content.Context
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
@@ -9,6 +10,7 @@ import androidx.fragment.app.FragmentPagerAdapter
 import androidx.viewpager.widget.ViewPager
 import com.nilprojects.androiduidesign.R
 import com.wajahatkarim3.easyflipviewpager.CardFlipPageTransformer
+import io.github.inflationx.viewpump.ViewPumpContextWrapper
 import me.relex.circleindicator.CircleIndicator
 
 
@@ -16,6 +18,11 @@ class PictureGalleryDemoActivity : AppCompatActivity() {
 
     lateinit var galleryViewPager: ViewPager
     lateinit var pagerAdapter: GalleryPagerAdapter
+
+    override fun attachBaseContext(newBase: Context) {
+        super.attachBaseContext(ViewPumpContextWrapper.wrap(newBase))
+    }
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

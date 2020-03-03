@@ -6,13 +6,14 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.nilprojects.androiduidesign.Activities.BubbleNav.fragment.EqualBottomBarFragment
 import com.nilprojects.androiduidesign.R
-import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper
+import io.github.inflationx.viewpump.ViewPumpContextWrapper
 
 class EqualBottomBarActivity : AppCompatActivity() {
 
-    override fun attachBaseContext(newBase: Context?) {
-        super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase))
+    override fun attachBaseContext(newBase: Context) {
+        super.attachBaseContext(ViewPumpContextWrapper.wrap(newBase))
     }
+
 
 
     override fun onCreate(savedInstanceState: Bundle?) {

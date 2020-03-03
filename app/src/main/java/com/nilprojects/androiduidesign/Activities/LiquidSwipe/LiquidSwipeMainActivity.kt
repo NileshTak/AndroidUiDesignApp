@@ -5,14 +5,15 @@ import android.content.Context
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.nilprojects.androiduidesign.R
+import io.github.inflationx.viewpump.ViewPumpContextWrapper
 import kotlinx.android.synthetic.main.liquid_swipe_activity_main.*
-import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper
 
 class LiquidSwipeMainActivity : AppCompatActivity() {
 
-    override fun attachBaseContext(newBase: Context?) {
-        super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase))
+    override fun attachBaseContext(newBase: Context) {
+        super.attachBaseContext(ViewPumpContextWrapper.wrap(newBase))
     }
+
 
 
     override fun onCreate(savedInstanceState: Bundle?) {

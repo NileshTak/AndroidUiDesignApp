@@ -24,8 +24,8 @@ import com.nilprojects.androiduidesign.R
 import java.util.ArrayList
 
 import io.codetail.animation.ViewAnimationUtils
+import io.github.inflationx.viewpump.ViewPumpContextWrapper
 import okhttp3.internal.Util
-import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper
 import yalantis.com.sidemenu.interfaces.Resourceble
 import yalantis.com.sidemenu.interfaces.ScreenShotable
 import yalantis.com.sidemenu.model.SlideMenuItem
@@ -40,9 +40,10 @@ class MainActivitySideMenu : AppCompatActivity(), ViewAnimator.ViewAnimatorListe
     private var res = R.drawable.content_music
     private var linearLayout: LinearLayout? = null
 
-    override fun attachBaseContext(newBase: Context?) {
-        super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase))
+    override fun attachBaseContext(newBase: Context) {
+        super.attachBaseContext(ViewPumpContextWrapper.wrap(newBase))
     }
+
 
 
     override fun onCreate(savedInstanceState: Bundle?) {

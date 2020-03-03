@@ -12,13 +12,8 @@ import com.nilprojects.androiduidesign.Activities.TapBarMenu.Fragment.TapOutPut
 import com.nilprojects.androiduidesign.R
 import com.nilprojects.androiduidesign.Adapter.TabAdapter
 import com.nilprojects.androiduidesign.CommonUtils.Utils
-import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper
 import android.widget.Toast
-
-
-
-
-
+import io.github.inflationx.viewpump.ViewPumpContextWrapper
 
 
 class TapBarMenu : AppCompatActivity() {
@@ -28,9 +23,10 @@ class TapBarMenu : AppCompatActivity() {
     lateinit var adapter: TabAdapter
     lateinit var  viewPager: ViewPager
 
-    override fun attachBaseContext(newBase: Context?) {
-        super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase))
+    override fun attachBaseContext(newBase: Context) {
+        super.attachBaseContext(ViewPumpContextWrapper.wrap(newBase))
     }
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

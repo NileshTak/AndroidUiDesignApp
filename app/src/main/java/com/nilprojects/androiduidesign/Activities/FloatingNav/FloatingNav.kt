@@ -15,10 +15,10 @@ import com.github.rubensousa.floatingtoolbar.FloatingToolbarMenuBuilder
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.android.material.snackbar.Snackbar
 import com.nilprojects.androiduidesign.CommonUtils.Utils
- import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper
  import androidx.core.content.ContextCompat
 import android.view.WindowManager
 import com.nilprojects.androiduidesign.R
+import io.github.inflationx.viewpump.ViewPumpContextWrapper
 
 
 class FloatingNav : AppCompatActivity(), FloatingToolbar.ItemClickListener,
@@ -29,9 +29,10 @@ class FloatingNav : AppCompatActivity(), FloatingToolbar.ItemClickListener,
     private var mAdapter: CustomAdapter? = null
 
 
-    override fun attachBaseContext(newBase: Context?) {
-        super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase))
+    override fun attachBaseContext(newBase: Context) {
+        super.attachBaseContext(ViewPumpContextWrapper.wrap(newBase))
     }
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

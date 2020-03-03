@@ -7,15 +7,16 @@ import androidx.appcompat.app.AppCompatActivity
 import com.nilprojects.androiduidesign.Activities.BubbleNav.adapters.ScreenSlidePagerAdapter
 import com.nilprojects.androiduidesign.Activities.BubbleNav.fragment.ScreenSlidePageFragment
 import com.nilprojects.androiduidesign.R
+import io.github.inflationx.viewpump.ViewPumpContextWrapper
 
 import kotlinx.android.synthetic.main.activity_floating_top_bar.*
-import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper
 
 class FloatingTopBarActivity : AppCompatActivity() {
 
-    override fun attachBaseContext(newBase: Context?) {
-        super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase))
+    override fun attachBaseContext(newBase: Context) {
+        super.attachBaseContext(ViewPumpContextWrapper.wrap(newBase))
     }
+
 
 
     override fun onCreate(savedInstanceState: Bundle?) {

@@ -10,8 +10,8 @@ import com.nilprojects.androiduidesign.Activities.FluidBottomNav.Fragment.Output
 import com.nilprojects.androiduidesign.Adapter.TabAdapter
 import com.nilprojects.androiduidesign.CommonUtils.Utils
 import com.nilprojects.androiduidesign.R
+import io.github.inflationx.viewpump.ViewPumpContextWrapper
 import kotlinx.android.synthetic.main.activity_bubble_bottom_nav.*
-import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper
 
 class FluidBottomNav : AppCompatActivity() {
 
@@ -19,9 +19,10 @@ class FluidBottomNav : AppCompatActivity() {
     lateinit var adapter: TabAdapter
     lateinit var  viewPager: ViewPager
 
-    override fun attachBaseContext(newBase: Context?) {
-        super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase))
+    override fun attachBaseContext(newBase: Context) {
+        super.attachBaseContext(ViewPumpContextWrapper.wrap(newBase))
     }
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

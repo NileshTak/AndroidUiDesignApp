@@ -14,7 +14,7 @@ import com.nilprojects.androiduidesign.CommonUtils.Utils
 
 import com.nilprojects.androiduidesign.R
 import com.ramotion.foldingcell.FoldingCell
-import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper
+import io.github.inflationx.viewpump.ViewPumpContextWrapper
 
 import java.util.ArrayList
 
@@ -23,11 +23,9 @@ import java.util.ArrayList
  */
 class MainActivityFoldingCell : AppCompatActivity() {
 
-    override fun attachBaseContext(newBase: Context?) {
-        super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase))
+    override fun attachBaseContext(newBase: Context) {
+        super.attachBaseContext(ViewPumpContextWrapper.wrap(newBase))
     }
-
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

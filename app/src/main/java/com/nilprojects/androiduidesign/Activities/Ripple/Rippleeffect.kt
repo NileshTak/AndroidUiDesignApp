@@ -9,7 +9,7 @@ import com.nilprojects.androiduidesign.Activities.Ripple.Fragments.CodeRipple
 import com.nilprojects.androiduidesign.Activities.Ripple.Fragments.OutputRipple
 import com.nilprojects.androiduidesign.Adapter.TabAdapter
 import com.nilprojects.androiduidesign.R
-import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper
+import io.github.inflationx.viewpump.ViewPumpContextWrapper
 
 class Rippleeffect : AppCompatActivity() {
 
@@ -17,9 +17,10 @@ class Rippleeffect : AppCompatActivity() {
     lateinit var adapter: TabAdapter
     lateinit var  viewPager: ViewPager
 
-    override fun attachBaseContext(newBase: Context?) {
-        super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase))
+    override fun attachBaseContext(newBase: Context) {
+        super.attachBaseContext(ViewPumpContextWrapper.wrap(newBase))
     }
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

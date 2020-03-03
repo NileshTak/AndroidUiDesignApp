@@ -23,16 +23,17 @@ import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
 import com.nilprojects.androiduidesign.CommonUtils.Utils
 import com.nilprojects.androiduidesign.R
+import io.github.inflationx.viewpump.ViewPumpContextWrapper
 import kotlinx.android.synthetic.main.activity_custom.*
-import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper
 
 class CustomActivity : AppCompatActivity() {
 
   private val adapter by lazy { ParentAdapter() }
 
-  override fun attachBaseContext(newBase: Context?) {
-    super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase))
+  override fun attachBaseContext(newBase: Context) {
+    super.attachBaseContext(ViewPumpContextWrapper.wrap(newBase))
   }
+
 
 
   override fun onCreate(savedInstanceState: Bundle?) {
