@@ -212,6 +212,10 @@
     <color name="viewpagerback">#4b4d50</color>
 
 
+    <color name="price_button_color">#00caff</color>
+    <color name="price_button_color_pressed">#00aadc</color>
+
+
 
 
 </resources>

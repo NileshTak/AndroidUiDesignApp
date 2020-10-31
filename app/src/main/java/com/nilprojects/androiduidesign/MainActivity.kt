@@ -12,6 +12,7 @@ import android.widget.LinearLayout
 
 import androidx.appcompat.app.AppCompatActivity
 import androidx.cardview.widget.CardView
+import com.agilie.aninterface.SampleActivity
 import com.nilprojects.androiduidesign.Activities.Alerter.KotlinDemoActivity
 import com.nilprojects.androiduidesign.Activities.BannerSlider.BannerSlider
 import com.nilprojects.androiduidesign.Activities.BottomNavCustom.CustomBottomNav
@@ -187,10 +188,16 @@ class MainActivity : AppCompatActivity() {
         }
 
 
+        findViewById<LinearLayout>(R.id.llInterface).setOnClickListener {
+            var int = Intent(this,SampleActivity :: class.java)
+            startActivity(int)
+        }
+
         findViewById<LinearLayout>(R.id.llFloatingNav).setOnClickListener {
             var int = Intent(this,FloatingNav :: class.java)
             startActivity(int)
         }
+
 
         findViewById<LinearLayout>(R.id.llRipple).setOnClickListener {
             var int = Intent(this,Rippleeffect :: class.java)

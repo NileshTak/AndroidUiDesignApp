@@ -52,6 +52,11 @@
             />
 
 
+        <activity android:name="com.agilie.aninterface.SampleActivity"
+            android:theme="@style/AppThemeMain"
+            />
+
+
 
 
         <activity
