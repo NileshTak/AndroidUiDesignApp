@@ -17,7 +17,6 @@ import com.nilprojects.androiduidesign.Activities.Alerter.KotlinDemoActivity
 import com.nilprojects.androiduidesign.Activities.BannerSlider.BannerSlider
 import com.nilprojects.androiduidesign.Activities.BottomNavCustom.CustomBottomNav
 import com.nilprojects.androiduidesign.Activities.CardPreviewAnim.CardPreview
-import com.nilprojects.androiduidesign.Activities.ContextMenu.ContextMenu
 import com.nilprojects.androiduidesign.Activities.CreativeViewPager.CreativeViewPager
 import com.nilprojects.androiduidesign.Activities.ExpandableLayout.CustomActivity
 import com.nilprojects.androiduidesign.Activities.ExpandableLayout.MainActivityExpandable
@@ -211,8 +210,8 @@ class MainActivity : AppCompatActivity() {
         }
 
         findViewById<LinearLayout>(R.id.llContextMenu).setOnClickListener {
-            var int = Intent(this,ContextMenu :: class.java)
-            startActivity(int)
+//            var int = Intent(this,ContextMenu :: class.java)
+//            startActivity(int)
         }
 
 
