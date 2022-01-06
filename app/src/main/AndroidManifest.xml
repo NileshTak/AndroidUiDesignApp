@@ -13,125 +13,119 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppThemeMain">
-        <activity android:name=".Activities.Ripple.Rippleeffect"
-            android:theme="@style/AppTheme"></activity>
-
-
-        <activity android:name=".Activities.ExpandableView.MainActivityExpandableView"
-            android:theme="@style/AppThemeExpand"></activity>
-
-
-        <activity android:name=".Activities.Alerter.KotlinDemoActivity"
-            android:theme="@style/AppThemeAlert"></activity>
-
-
-        <activity android:name=".Activities.SpotsUi.Activity.MainActivitySpot"
-            android:theme="@style/AppThemeSpot"/>
-        <activity android:name=".Activities.SpotsUi.Activity.CartActivity"
-            android:theme="@style/AppThemeSpot"/>
-
-        <activity android:name=".Activities.ViewAnimation.MyActivity"
-            android:theme="@style/AppTheme"></activity>
-
-        <activity android:name=".Activities.ViewAnimation.ExampleActivity"
+        <activity
+            android:name=".Activities.RubberPicker.RubberPicker"
             android:theme="@style/AppTheme"
-            />
-
-
-        <activity android:name=".Activities.ExpandableLayout.MainActivityExpandable"
+            android:exported="true" />
+        <activity
+            android:name=".Activities.Ripple.Rippleeffect"
             android:theme="@style/AppTheme"
+            android:exported="true"
             />
-
-        <activity android:name=".Activities.ExpandableLayout.CustomActivity"
-            android:theme="@style/AppTheme"
-            />
-
-
-        <activity android:name=".Activities.FoldingCell.MainActivityFoldingCell"
-            android:theme="@style/AppTheme"
-            />
-
-
-        <activity android:name="com.agilie.aninterface.SampleActivity"
-            android:theme="@style/AppThemeMain"
-            />
-
-
-
-
+        <activity
+            android:name=".Activities.ExpandableView.MainActivityExpandableView"
+            android:theme="@style/AppThemeExpand" />
+        <activity
+            android:name=".Activities.Alerter.KotlinDemoActivity"
+            android:theme="@style/AppThemeAlert" />
+        <activity
+            android:name=".Activities.SpotsUi.Activity.MainActivitySpot"
+            android:theme="@style/AppThemeSpot" />
+        <activity
+            android:name=".Activities.SpotsUi.Activity.CartActivity"
+            android:theme="@style/AppThemeSpot" />
+        <activity
+            android:name=".Activities.ViewAnimation.MyActivity"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".Activities.ViewAnimation.ExampleActivity"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".Activities.ExpandableLayout.MainActivityExpandable"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".Activities.ExpandableLayout.CustomActivity"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".Activities.FoldingCell.MainActivityFoldingCell"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.agilie.aninterface.SampleActivity"
+            android:theme="@style/AppThemeMain" />
         <activity
             android:name=".Activities.FlipViewpager.BookOnboardingActivity"
-            android:theme="@style/AppThemeNo">
-        </activity>
-        <activity android:name=".Activities.FlipViewpager.PokerCardDemoActivity"
+            android:theme="@style/AppThemeNo"></activity>
+        <activity
+            android:name=".Activities.FlipViewpager.PokerCardDemoActivity"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".Activities.FlipViewpager.PictureGalleryDemoActivity"
             android:theme="@style/AppTheme"></activity>
-        <activity android:name=".Activities.FlipViewpager.PictureGalleryDemoActivity"
-            android:theme="@style/AppTheme">
-        </activity>
-        <activity android:name=".Activities.FlipViewpager.MainActivityFlip"
-            android:theme="@style/AppTheme"/>
-
+        <activity
+            android:name=".Activities.FlipViewpager.MainActivityFlip"
+            android:theme="@style/AppTheme" />
         <activity
             android:name=".Activities.FragmentNavAnim.MainActivityNavFrag"
-            android:theme="@style/AppTheme">
-
-        </activity>
-
+            android:theme="@style/AppTheme"></activity>
         <activity
             android:name=".Activities.CardPreviewAnim.CardPreview"
             android:theme="@style/AppThemeNo" />
-        <activity android:name=".Activities.ViewPagerTransformation.ViewPagerTransformation"
-            android:theme="@style/AppTheme"/>
-        <activity android:name=".Activities.CreativeViewPager.CreativeViewPager"
-            android:theme="@style/AppTheme"/>
-        <activity android:name=".Activities.BannerSlider.BannerSlider"
-            android:theme="@style/AppTheme"/>
-        <activity android:name=".Activities.SmartiestImageSlider.SmartiestImageSlider"
-            android:theme="@style/AppTheme"/>
-        <activity android:name=".Activities.ViewPagerTransformation.TransformationActivity"
-            android:theme="@style/AppTheme"/>
-        <activity android:name=".Activities.ViewPagerTransformation.CircularViewPager"
-            android:theme="@style/AppTheme"/>
-
-        <activity android:name=".Activities.FloatingNav.FloatingNav"
-            android:theme="@style/AppThemeNo"/>
-
+        <activity
+            android:name=".Activities.ViewPagerTransformation.ViewPagerTransformation"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".Activities.CreativeViewPager.CreativeViewPager"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".Activities.BannerSlider.BannerSlider"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".Activities.SmartiestImageSlider.SmartiestImageSlider"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".Activities.ViewPagerTransformation.TransformationActivity"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".Activities.ViewPagerTransformation.CircularViewPager"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".Activities.FloatingNav.FloatingNav"
+            android:theme="@style/AppThemeNo" />
         <activity
             android:name=".Activities.FluidBottomNav.FluidBottomNav"
             android:screenOrientation="portrait"
-            android:theme="@style/AppTheme"/>
-        <activity android:name=".Activities.ReadableBottomBar.ReadableBottomNav"
-            android:theme="@style/AppTheme"/>
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".Activities.ReadableBottomBar.ReadableBottomNav"
+            android:theme="@style/AppTheme" />
         <activity
             android:name=".Activities.MeowBottomNav.MeowNavBottom"
             android:theme="@style/AppTheme" />
         <activity
             android:name=".Activities.TapBarMenu.TapBarMenu"
             android:theme="@style/AppTheme" />
-
-
-        <activity android:name=".Activities.BottomNavCustom.CustomBottomNav"
-            android:theme="@style/AppTheme"/>
-
-
-        <activity android:name=".Activities.BubbleNav.BottomBarActivity"
+        <activity
+            android:name=".Activities.BottomNavCustom.CustomBottomNav"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".Activities.BubbleNav.BottomBarActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/AppTheme"/>
-        <activity android:name=".Activities.BubbleNav.TopBarActivity"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".Activities.BubbleNav.TopBarActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/AppTheme"/>
-        <activity android:name=".Activities.BubbleNav.EqualBottomBarActivity"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".Activities.BubbleNav.EqualBottomBarActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/AppTheme"/>
-        <activity android:name=".Activities.BubbleNav.FloatingTopBarActivity"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".Activities.BubbleNav.FloatingTopBarActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/AppTheme"/>
-
-
-        <activity android:name=".Activities.TargetPrompt.MainActivityTargetPrompt"
-            android:theme="@style/AppThemeNo"/>
-
-
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".Activities.TargetPrompt.MainActivityTargetPrompt"
+            android:theme="@style/AppThemeNo" />
         <activity
             android:name=".Activities.TargetPrompt.DialogStyleActivity"
             android:parentActivityName=".Activities.TargetPrompt.MainActivityTargetPrompt"
@@ -142,12 +136,10 @@
         </activity>
         <activity
             android:name=".Activities.TargetPrompt.KotlinActivity"
-            android:theme="@style/AppTheme">
-        </activity>
+            android:theme="@style/AppTheme"></activity>
         <activity
             android:name=".Activities.TargetPrompt.CentrePositionActivity"
-            android:theme="@style/AppTheme.NoActionBar">
-        </activity>
+            android:theme="@style/AppTheme.NoActionBar"></activity>
         <activity
             android:name=".Activities.TargetPrompt.CardActivity"
             android:label="@string/title_activity_card"
@@ -166,21 +158,16 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".Activities.TargetPrompt.MainActivityTargetPrompt" />
         </activity>
-
-
-
-        <activity android:name=".Activities.SideMenu.MainActivitySideMenu"
+        <activity
+            android:name=".Activities.SideMenu.MainActivitySideMenu"
             android:configChanges="orientation|screenSize" />
-
-        <activity android:name=".Activities.ContextMenu.ContextMenu"
+        <activity
+            android:name=".Activities.ContextMenu.ContextMenu"
             android:configChanges="orientation|screenSize" />
-
-        <activity android:name=".Activities.SlidingRootNav.SlidingRootNavActivity"
-            android:theme="@style/AppThemeNo"/>
-
-        <activity android:name=".Activities.LiquidSwipe.LiquidSwipeMainActivity"/>
-
-
+        <activity
+            android:name=".Activities.SlidingRootNav.SlidingRootNavActivity"
+            android:theme="@style/AppThemeNo" />
+        <activity android:name=".Activities.LiquidSwipe.LiquidSwipeMainActivity" />
         <activity
             android:name=".Activities.MikepenzeNav.MaterialDrawerActivity"
             android:theme="@style/MaterialDrawerTheme.Light.DarkToolbar" />
@@ -248,10 +235,6 @@
             android:name=".Activities.MikepenzeNav.newactivities.HeaderFooterActivity"
             android:label="Header and footer"
             android:theme="@style/MaterialDrawerTheme.Light.DarkToolbar" />
-
-
-
-
         <activity android:name=".MainActivity">
             android:windowSoftInputMode="stateHidden|stateAlwaysHidden">
             <intent-filter>
@@ -260,8 +243,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-
     </application>
 
 </manifest>

@@ -32,6 +32,7 @@ import com.nilprojects.androiduidesign.Activities.MeowBottomNav.MeowNavBottom
 import com.nilprojects.androiduidesign.Activities.MikepenzeNav.MaterialDrawerActivity
 import com.nilprojects.androiduidesign.Activities.ReadableBottomBar.ReadableBottomNav
 import com.nilprojects.androiduidesign.Activities.Ripple.Rippleeffect
+import com.nilprojects.androiduidesign.Activities.RubberPicker.RubberPicker
 import com.nilprojects.androiduidesign.Activities.SideMenu.MainActivitySideMenu
 import com.nilprojects.androiduidesign.Activities.SlidingRootNav.SlidingRootNavActivity
 import com.nilprojects.androiduidesign.Activities.SpotsUi.Activity.MainActivitySpot
@@ -200,6 +201,10 @@ class MainActivity : AppCompatActivity() {
 
         findViewById<LinearLayout>(R.id.llRipple).setOnClickListener {
             var int = Intent(this,Rippleeffect :: class.java)
+            startActivity(int)
+        }
+        findViewById<LinearLayout>(R.id.llRubberPicker).setOnClickListener {
+            var int = Intent(this,RubberPicker :: class.java)
             startActivity(int)
         }
 

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.RubberPicker.RubberPicker">
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabLayoutRubber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:minHeight="?actionBarSize"
+        app:tabBackground="@color/white"
+
+        app:tabGravity="fill"
+        app:tabIconTint="@color/colorPrimary"
+        app:tabIndicatorColor="@color/colorPrimary"
+        app:tabIndicatorHeight="4dp"
+        app:tabRippleColor="@color/colorPrimary"
+        app:tabSelectedTextColor="@color/colorPrimary"></com.google.android.material.tabs.TabLayout>
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewPagerRubber"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/tabLayoutRubber"
+        android:layout_marginTop="10dp"
+        android:layout_height="match_parent">
+    </androidx.viewpager.widget.ViewPager>
+
+</RelativeLayout>
