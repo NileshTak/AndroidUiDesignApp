@@ -21,10 +21,11 @@
     <string name="drawer_open">Open</string>
     <string name="drawer_close">Close</string>
 
+
+    <string name="module_name">ContextMenu</string>
     <string name="text">Squid blog crucifix Marfa, consectetur vero placeat mixtape. Non seitan sriracha eu, do Banksy fashion axe cred qui vegan delectus consequat Helvetica mollit. XOXO gluten-free disrupt, gastropub officia cliche chillwave hella pop-up. Fixie swag raw denim, YOLO craft beer assumenda occupy veniam photo booth pug consectetur next level Portland tote bag +1. Mlkshk PBR aliquip placeat Wes Anderson.</string>
     <string name="title">My Description</string>
     <string name="context_menu">Context menu</string>
-
 
 
     <string name="title_activity_example">Alerter Demo</string>
@@ -78,7 +79,6 @@
     <string name="title_activity_main2">Main2Activity</string>
 
 
-
     <string name="search_desc">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod</string>
     <string name="ok">Okay</string>
     <string name="category">CATEGORY</string>
@@ -104,9 +104,6 @@
     <string name="best">SUPERIOR</string>
     <string name="power">Leistung</string>
     <string name="detailedDescription">Detailbeschreibung</string>
-
-
-
 
 
     <string name="drawer_item_compact_header">CompactHeader Drawer</string>
@@ -160,10 +157,6 @@
 
 
     <string name="item_nature_title">Nature %d</string>
-
-
-
-
 
 
     <string name="github">github.com/sjwall/MaterialTapTargetPrompt</string>

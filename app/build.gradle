@@ -149,4 +149,5 @@ dependencies {
     implementation 'com.agilie:interface-interaction:1.0'
 
     implementation 'com.github.Chrisvin:RubberPicker:v1.5'
+    implementation 'com.github.Yalantis:Context-Menu.Android:1.1.4'
 }

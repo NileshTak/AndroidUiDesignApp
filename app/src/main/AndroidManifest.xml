@@ -14,14 +14,15 @@
         android:supportsRtl="true"
         android:theme="@style/AppThemeMain">
         <activity
-            android:name=".Activities.RubberPicker.RubberPicker"
-            android:theme="@style/AppTheme"
+            android:name=".Activities.ContextMenu.ContextMenu"
+            android:configChanges="orientation|screenSize"
             android:exported="true" />
         <activity
+            android:name=".Activities.RubberPicker.RubberPicker"
+            android:theme="@style/AppTheme" />
+        <activity
             android:name=".Activities.Ripple.Rippleeffect"
-            android:theme="@style/AppTheme"
-            android:exported="true"
-            />
+            android:theme="@style/AppTheme" />
         <activity
             android:name=".Activities.ExpandableView.MainActivityExpandableView"
             android:theme="@style/AppThemeExpand" />
@@ -54,19 +55,19 @@
             android:theme="@style/AppThemeMain" />
         <activity
             android:name=".Activities.FlipViewpager.BookOnboardingActivity"
-            android:theme="@style/AppThemeNo"></activity>
+            android:theme="@style/AppThemeNo" />
         <activity
             android:name=".Activities.FlipViewpager.PokerCardDemoActivity"
             android:theme="@style/AppTheme" />
         <activity
             android:name=".Activities.FlipViewpager.PictureGalleryDemoActivity"
-            android:theme="@style/AppTheme"></activity>
+            android:theme="@style/AppTheme" />
         <activity
             android:name=".Activities.FlipViewpager.MainActivityFlip"
             android:theme="@style/AppTheme" />
         <activity
             android:name=".Activities.FragmentNavAnim.MainActivityNavFrag"
-            android:theme="@style/AppTheme"></activity>
+            android:theme="@style/AppTheme" />
         <activity
             android:name=".Activities.CardPreviewAnim.CardPreview"
             android:theme="@style/AppThemeNo" />
@@ -136,10 +137,10 @@
         </activity>
         <activity
             android:name=".Activities.TargetPrompt.KotlinActivity"
-            android:theme="@style/AppTheme"></activity>
+            android:theme="@style/AppTheme" />
         <activity
             android:name=".Activities.TargetPrompt.CentrePositionActivity"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".Activities.TargetPrompt.CardActivity"
             android:label="@string/title_activity_card"
@@ -160,9 +161,6 @@
         </activity>
         <activity
             android:name=".Activities.SideMenu.MainActivitySideMenu"
-            android:configChanges="orientation|screenSize" />
-        <activity
-            android:name=".Activities.ContextMenu.ContextMenu"
             android:configChanges="orientation|screenSize" />
         <activity
             android:name=".Activities.SlidingRootNav.SlidingRootNavActivity"
