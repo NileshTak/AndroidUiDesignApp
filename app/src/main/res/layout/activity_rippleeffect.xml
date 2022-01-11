@@ -12,15 +12,15 @@
         android:layout_height="wrap_content"
 
         android:minHeight="?actionBarSize"
-        app:tabGravity="fill"
+        app:tabBackground="@color/white"
 
+        app:tabGravity="fill"
         app:tabIconTint="@color/colorPrimary"
-        app:tabRippleColor="@color/colorPrimary"
-        app:tabSelectedTextColor="@color/colorPrimary"
         app:tabIndicatorColor="@color/colorPrimary"
         app:tabIndicatorHeight="4dp"
-        app:tabBackground="@color/white"
-        >
+        app:tabRippleColor="@color/colorPrimary"
+        app:tabSelectedTextColor="@color/colorPrimary">
+
     </com.google.android.material.tabs.TabLayout>
 
     <androidx.viewpager.widget.ViewPager
