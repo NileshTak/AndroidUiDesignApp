@@ -7,19 +7,33 @@
         <entry key="..\:/#/android/CV/AndroidUiDesignApp/app/src/main/res/drawable/github_circle_dark.xml" value="0.29791666666666666" />
         <entry key="..\:/#/android/CV/AndroidUiDesignApp/app/src/main/res/layout/activity_context_menu.xml" value="0.38697916666666665" />
         <entry key="..\:/#/android/CV/AndroidUiDesignApp/app/src/main/res/layout/activity_context_menu2.xml" value="0.38697916666666665" />
+        <entry key="..\:/#/android/CV/AndroidUiDesignApp/app/src/main/res/layout/activity_folding_tabbar.xml" value="0.28020833333333334" />
+        <entry key="..\:/#/android/CV/AndroidUiDesignApp/app/src/main/res/layout/activity_folding_tap_bar_menu.xml" value="0.38697916666666665" />
+        <entry key="..\:/#/android/CV/AndroidUiDesignApp/app/src/main/res/layout/activity_foldingtabbar.xml" value="0.28020833333333334" />
         <entry key="..\:/#/android/CV/AndroidUiDesignApp/app/src/main/res/layout/activity_main.xml" value="0.22552083333333334" />
         <entry key="..\:/#/android/CV/AndroidUiDesignApp/app/src/main/res/layout/activity_main_side_menu.xml" value="0.38697916666666665" />
         <entry key="..\:/#/android/CV/AndroidUiDesignApp/app/src/main/res/layout/activity_rippleeffect.xml" value="0.2957427536231884" />
         <entry key="..\:/#/android/CV/AndroidUiDesignApp/app/src/main/res/layout/activity_rubber_picker.xml" value="0.21875" />
         <entry key="..\:/#/android/CV/AndroidUiDesignApp/app/src/main/res/layout/fragment_code2.xml" value="0.2957427536231884" />
         <entry key="..\:/#/android/CV/AndroidUiDesignApp/app/src/main/res/layout/fragment_code_rubber.xml" value="0.3729166666666667" />
+        <entry key="..\:/#/android/CV/AndroidUiDesignApp/app/src/main/res/layout/fragment_folding_tab_bar_output.xml" value="0.38697916666666665" />
+        <entry key="..\:/#/android/CV/AndroidUiDesignApp/app/src/main/res/layout/fragment_folding_tap_code.xml" value="0.38697916666666665" />
+        <entry key="..\:/#/android/CV/AndroidUiDesignApp/app/src/main/res/layout/fragment_folding_tap_out_put.xml" value="0.38697916666666665" />
+        <entry key="..\:/#/android/CV/AndroidUiDesignApp/app/src/main/res/layout/fragment_folding_tap_output.xml" value="0.17" />
         <entry key="..\:/#/android/CV/AndroidUiDesignApp/app/src/main/res/layout/fragment_output.xml" value="0.18819655521783182" />
         <entry key="..\:/#/android/CV/AndroidUiDesignApp/app/src/main/res/layout/fragment_output_context_menu.xml" value="0.38697916666666665" />
         <entry key="..\:/#/android/CV/AndroidUiDesignApp/app/src/main/res/layout/fragment_output_rubber.xml" value="0.38697916666666665" />
+        <entry key="..\:/#/android/CV/AndroidUiDesignApp/app/src/main/res/layout/fragment_tap_code.xml" value="0.38697916666666665" />
+        <entry key="..\:/#/android/CV/AndroidUiDesignApp/app/src/main/res/layout/fragment_tap_out_put.xml" value="0.38697916666666665" />
         <entry key="..\:/#/android/CV/AndroidUiDesignApp/app/src/main/res/layout/scrollable_content.xml" value="0.38697916666666665" />
         <entry key="..\:/#/android/CV/AndroidUiDesignApp/app/src/main/res/layout/support_fragment_dialog.xml" value="0.38697916666666665" />
         <entry key="..\:/#/android/CV/AndroidUiDesignApp/app/src/main/res/layout/toolbar.xml" value="0.38697916666666665" />
+        <entry key="..\:/#/android/CV/AndroidUiDesignApp/app/src/main/res/menu/bottom_nav_drawer_menu.xml" value="0.28020833333333334" />
+        <entry key="..\:/#/android/CV/AndroidUiDesignApp/app/src/main/res/menu/bottom_nav_items.xml" value="0.28020833333333334" />
         <entry key="..\:/#/android/CV/AndroidUiDesignApp/app/src/main/res/menu/context_menu.xml" value="0.1" />
+        <entry key="..\:/#/android/CV/AndroidUiDesignApp/app/src/main/res/menu/example_menu.xml" value="0.28020833333333334" />
+        <entry key="..\:/#/android/CV/AndroidUiDesignApp/app/src/main/res/menu/foldingtap.xml" value="0.33" />
+        <entry key="..\:/#/android/CV/AndroidUiDesignApp/app/src/main/res/menu/fragment_menu.xml" value="0.28020833333333334" />
       </map>
     </option>
   </component>

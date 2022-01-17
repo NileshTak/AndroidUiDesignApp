@@ -9,12 +9,6 @@ import android.view.Menu
 import android.view.MenuItem
 import android.widget.Toast
 import androidx.appcompat.widget.Toolbar
-import androidx.viewpager.widget.ViewPager
-import com.google.android.material.tabs.TabLayout
-import com.nilprojects.androiduidesign.Activities.ContextMenu.fragments.OutputContextMenu
-import com.nilprojects.androiduidesign.Activities.RubberPicker.Fragments.CodeRubber
-import com.nilprojects.androiduidesign.Activities.RubberPicker.Fragments.OutputRubber
-import com.nilprojects.androiduidesign.Adapter.TabAdapter
 import com.nilprojects.androiduidesign.CommonUtils.Utils
 import com.nilprojects.androiduidesign.R
 import com.yalantis.contextmenu.lib.ContextMenuDialogFragment

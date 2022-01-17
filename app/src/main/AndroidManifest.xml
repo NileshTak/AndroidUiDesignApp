@@ -14,9 +14,13 @@
         android:supportsRtl="true"
         android:theme="@style/AppThemeMain">
         <activity
+            android:name=".Activities.FoldingTapBar.FoldingTapBar"
+            android:theme="@style/AppTheme"
+            android:exported="true" />
+        <activity
             android:name=".Activities.ContextMenu.ContextMenu"
             android:configChanges="orientation|screenSize"
-            android:exported="true" />
+            android:exported="false" />
         <activity
             android:name=".Activities.RubberPicker.RubberPicker"
             android:theme="@style/AppTheme" />

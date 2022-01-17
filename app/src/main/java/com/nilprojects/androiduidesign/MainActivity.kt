@@ -26,6 +26,7 @@ import com.nilprojects.androiduidesign.Activities.FlipViewpager.MainActivityFlip
 import com.nilprojects.androiduidesign.Activities.FloatingNav.FloatingNav
 import com.nilprojects.androiduidesign.Activities.FluidBottomNav.FluidBottomNav
 import com.nilprojects.androiduidesign.Activities.FoldingCell.MainActivityFoldingCell
+import com.nilprojects.androiduidesign.Activities.FoldingTapBar.FoldingTapBar
 import com.nilprojects.androiduidesign.Activities.FragmentNavAnim.MainActivityNavFrag
 import com.nilprojects.androiduidesign.Activities.LiquidSwipe.LiquidSwipeMainActivity
 import com.nilprojects.androiduidesign.Activities.SmartiestImageSlider.SmartiestImageSlider
@@ -206,6 +207,10 @@ class MainActivity : AppCompatActivity() {
         }
         findViewById<LinearLayout>(R.id.llRubberPicker).setOnClickListener {
             var int = Intent(this,RubberPicker :: class.java)
+            startActivity(int)
+        }
+        findViewById<LinearLayout>(R.id.llFoldingTapBar).setOnClickListener {
+            var int = Intent(this,FoldingTapBar :: class.java)
             startActivity(int)
         }
 
